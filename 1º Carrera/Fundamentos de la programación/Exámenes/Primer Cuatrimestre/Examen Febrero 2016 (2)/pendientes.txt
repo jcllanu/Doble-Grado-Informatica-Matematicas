@@ -1,0 +1,6 @@
+KLM1231 B 1 2 Ámsterdam
+AL1236 A 2 3 Roma
+LU1301 A 5 3 Zagreb
+TP1302 B 2 2 Oporto
+AV1411 B 3 3 Sao Paulo
+XXX

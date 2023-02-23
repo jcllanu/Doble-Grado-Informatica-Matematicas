@@ -1,0 +1,17 @@
+Cuadrilla      Capacidad      Plantación     Parcela      Platanos en parcela 
+
+  cuad1           30          Plantacion1     (0,4)              68
+  cuad2           5           Plantacion1     (0,4)              68
+  cuad3           20          Plantacion1     (0,4)              68
+  cuad4           10          Plantacion1     (0,4)              68
+  cuad5           40          Plantacion1     (0,4)              68
+  cuad6           5           Plantacion2     (0,4)              39
+  cuad7           10          Plantacion2     (0,4)              39
+  cuad8           30          Plantacion2     (0,4)              39
+  cuad9           25          Plantacion1     (0,0)              31
+  cuad10          5           Plantacion1     (0,0)              31
+  cuad11          20          Plantacion1     (0,0)              31
+  cuad12          30          Plantacion2     (0,0)              23
+  cuad13          35          Plantacion2     (0,8)              15
+  cuad14          10          Plantacion1     (4,4)              7
+  cuad15          18          Plantacion1     (4,0)              7

@@ -1,0 +1,120 @@
+.EQU N1, 5
+.EQU N2, 8
+.EQU N3, 15
+.global start
+.data
+A1:			.word 7,3,25,4,75
+A2:			.word 7,3,25,4,75,2,1,1
+A3:			.word 8,54,20,18,36,48,51,0,1,6,4,17,36,1,2
+
+.bss
+B: 			.space N3*4
+
+.text
+start:		ldr r0, =A1@parametro =A1 en r0
+			mov r1, #N1 @parametro N1 en r1
+
+			bl ordenar_vector
+
+			ldr r0, =A2 @parametro =A2 en r0
+			mov r1, #N2 @parametro N2 en r1
+
+			bl ordenar_vector
+
+			ldr r0, =A3 @parametro =A3 en r0
+			mov r1, #N3 @parametro N3 en r1
+
+			bl ordenar_vector
+
+			b .
+
+/*subrutina ordenar*/
+ordenar_vector:
+			push {r4 - r7, lr} @RELLENAR
+			mov r4, r0 @=A
+			ldr r5, =B @=B
+			mov r7, r1 @constante N
+			mov r6, #0 @j = 0
+
+loop_j:		cmp r6, r7
+			bge end_loop_j
+
+			mov r0, r4 @=A pasado en el registro 0
+			mov r1, r7 @pasado N en registro 1
+			bl ind_max @llamada a la funcion
+
+			ldr r2, [r4, r0, lsl#2] @load A[ind]
+			str r2, [r5, r6, lsl#2] @str B[j]
+			mov r2, #0
+			str r2, [r4, r0, lsl#2] @A[ind] = 0
+
+			add r6, r6, #1 @j++
+			b loop_j
+
+end_loop_j:	mov r1, r4 @parametro en r0 =A
+			mov r0, r5 @parametro en r1 =B
+			mov r2, r7 @parametro en r2 #N
+
+			bl copiar @llamada a copiar
+
+			pop {r4 - r7, lr} @RELLENAR
+			mov pc, lr
+
+
+
+
+
+/*primera subrutina*/
+ind_max:	push {r4 - r5, lr}
+			mov r4, r0 @movemos el parametro =A a r4
+			mov r3, #0 @max = 0
+			mov r0, #0 @indice = 0
+
+			mov r2, #0 @i = 0
+loop_max:	cmp r2, r1 @i >= N
+			bge end_loop_max
+
+			ldr r5, [r4, r2, lsl#2] @A[i]
+			cmp r5, r3 @A[i] <= max
+			ble else_max
+
+			mov r3, r5 @max = A[i]
+			mov r0, r2 @ind  i
+
+else_max:	add r2, r2, #1 @i++
+			b loop_max
+
+end_loop_max:
+			pop {r4 - r5, lr}
+			mov pc, lr
+
+/*subrutina copiar*/
+copiar: 	push {r4 -r7, lr}
+			mov r4, r0 @=B
+			mov r5, r1 @=A
+			mov r6, r2 @#N
+			mov r7, #0 @i = 0
+
+loop_i:		cmp r7, r6
+			bge fin_loop_i
+
+			ldr r0, [r4, r7, lsl#2] @B[i]
+			str r0, [r5, r7, lsl#2] @str A[i]
+
+			add r7, r7, #1 @i++
+
+			b loop_i
+
+fin_loop_i:	pop {r4 - r7, lr}
+			mov pc, lr
+
+
+.end
+
+
+
+
+
+
+
+

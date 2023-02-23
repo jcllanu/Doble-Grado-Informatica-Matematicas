@@ -1,0 +1,5 @@
+package tp.tp1.controller.commands;
+
+public class RotateCommand {
+
+}

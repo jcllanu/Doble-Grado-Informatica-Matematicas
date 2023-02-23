@@ -1,0 +1,4 @@
+ada + byron = molar
+ada * byron = leyenda
+acepta + elreto = mental
+solo + sola = baile

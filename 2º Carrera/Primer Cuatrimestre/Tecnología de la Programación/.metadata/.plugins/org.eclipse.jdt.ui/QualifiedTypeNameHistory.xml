@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="tp.tp1.game.gameObjects.ExplosiveAlien"/>
+    <fullyQualifiedTypeName name="tp.tp1.view.GamePrinter"/>
+    <fullyQualifiedTypeName name="tp.tp1.view.FormattedPrinter"/>
+    <fullyQualifiedTypeName name="tp.tp1.view.Stringifier"/>
+    <fullyQualifiedTypeName name="tp.tp1.exceptions.OffWorldException"/>
+    <fullyQualifiedTypeName name="tp.tp1.exceptions.CommandParseException"/>
+    <fullyQualifiedTypeName name="tp.tp1.view.PrinterTypes"/>
+    <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
+    <fullyQualifiedTypeName name="tp.tp1.exceptions.CommandExecuteException"/>
+    <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="tp.tp1.exceptions.FileContentsException"/>
+    <fullyQualifiedTypeName name="tp.tp1.game.Game"/>
+    <fullyQualifiedTypeName name="tp.tp1.Level"/>
+    <fullyQualifiedTypeName name="tp.tp1.game.FileContentsVerifier"/>
+    <fullyQualifiedTypeName name="tp.tp1.game.gameObjects.GameObjectGenerator"/>
+    <fullyQualifiedTypeName name="tp.tp1.game.gameObjects.AlienShip"/>
+    <fullyQualifiedTypeName name="tp.tp1.game.gameObjects.DestroyerAlien"/>
+    <fullyQualifiedTypeName name="tp.tp1.game.gameObjects.UCMShipSuperMisil"/>
+    <fullyQualifiedTypeName name="tp.tp1.game.gameObjects.ExplosiveMissile"/>
+    <fullyQualifiedTypeName name="tp.tp1.game.Move"/>
+    <fullyQualifiedTypeName name="tp.tp1.game.gameObjects.Ovni"/>
+</qualifiedTypeNameHistroy>

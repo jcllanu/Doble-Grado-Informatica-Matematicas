@@ -1,0 +1,26 @@
+7
+Pacman Parchis Parchis SuperMario Pacman Parchis MineCraft
+5
+2 Pacman
+1 MineCraft
+3 Parchis
+1 Oca
+2 SuperMario
+10
+Pacman Parchis Parchis Pacman Parchis Parchis SuperMario Pacman Parchis MineCraft
+15
+1 Pacman
+2 Pacman
+3 Pacman
+4 Pacman
+1 MineCraft
+2 MineCraft
+1 Parchis
+2 Parchis
+3 Parchis
+4 Parchis
+5 Parchis
+6 Parchis
+1 Oca
+1 SuperMario
+2 SuperMario

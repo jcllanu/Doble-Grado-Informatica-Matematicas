@@ -1,0 +1,314 @@
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.Stack;
+
+import javax.swing.BorderFactory;
+import javax.swing.Box;
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import javax.swing.SwingUtilities;
+import javax.swing.border.Border;
+
+public class Calculadora extends JFrame{
+	
+	private JLabel pantalla, resultado;
+	private boolean ultimoDigito=false;
+	private ArrayList<String> operandos= new ArrayList<String>();
+	public Calculadora() {
+		super("Calculadora");
+		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		this.setSize(500,800);
+		intGui();
+		this.setVisible(true);
+	}
+	
+	public void intGui() {
+		this.getContentPane().setLayout(new BorderLayout());
+		
+		JLabel ltitulo=new JLabel("CASIO CLASSWIZ",SwingConstants.CENTER);
+		ltitulo.setBackground(Color.magenta);
+		ltitulo.setOpaque(true);
+		this.getContentPane().add(ltitulo,BorderLayout.NORTH);
+		
+		JLabel lmodelo=new JLabel("fx-82SP X Iberia",SwingConstants.CENTER);
+		lmodelo.setBackground(Color.orange);
+		lmodelo.setOpaque(true);
+		this.getContentPane().add(lmodelo,BorderLayout.SOUTH);
+		
+		JPanel pCentral= new JPanel();
+		
+		pCentral.setLayout(new GridLayout(2,1,10,10));
+		JPanel pSuperior= new JPanel();
+		JPanel pInferior= new JPanel();
+		
+		pantalla=new JLabel("");
+		resultado=new JLabel("");
+		
+		pInferior.setBackground(Color.yellow);
+		pInferior.setLayout(new GridLayout(4,5,5,5));
+		for(int i=0; i<3;i++) {
+			for(int j=0; j<3; j++) {
+				pInferior.add(createBoton(7-3*i +j));
+			}
+			if(i==0) {
+				pInferior.add(createBoton("DELETE"));
+				pInferior.add(createBoton("CLEAR"));
+			}else if(i==1) {
+				pInferior.add(createBoton("x"));
+				pInferior.add(createBoton("/"));
+			}else if(i==2) {
+				pInferior.add(createBoton("+"));
+				pInferior.add(createBoton("-"));
+			}
+		}
+		pInferior.add(createBoton(0));
+		pInferior.add(createBoton("."));
+		pInferior.add(createBoton("("));
+		pInferior.add(createBoton(")"));
+		pInferior.add(createBoton("="));
+		
+		
+		
+		pSuperior.setLayout(new BoxLayout(pSuperior,BoxLayout.Y_AXIS));
+		JPanel supArriba = new JPanel();
+		JPanel supAbajo = new JPanel();
+		
+		pantalla.setSize(40, 100);
+		resultado.setSize(40, 100);
+		supArriba.add(pantalla);
+		supAbajo.add(resultado);
+		pSuperior.add(supArriba);
+		pSuperior.add(supAbajo);
+		
+		
+		
+		pCentral.add(pSuperior);
+		pCentral.add(pInferior);
+		
+		pCentral.setBackground(Color.green);
+		pCentral.setOpaque(true);
+		
+		JPanel pDer= new JPanel();
+		pDer.setBackground(Color.green);
+		pDer.setOpaque(true);
+		
+		JPanel pIzq= new JPanel();
+		pIzq.setBackground(Color.green);
+		pIzq.setOpaque(true);
+		
+		this.getContentPane().add(pIzq, BorderLayout.WEST);
+		this.getContentPane().add(pDer, BorderLayout.EAST);
+		this.getContentPane().add(pCentral, BorderLayout.CENTER);
+	}
+	
+	public JButton createBoton(String n) {
+		JButton boton = new JButton(n);
+		boton.setBackground(Color.cyan);
+		
+		if(n.equals("DELETE")) {
+			boton.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					if(pantalla.getText().length()>0) {
+						pantalla.setText(pantalla.getText().substring(0, pantalla.getText().length()-1));
+						String ultimo=operandos.get(operandos.size()-1);
+						if(ultimo.length()==1)
+							operandos.remove(operandos.size()-1);
+						else
+							operandos.set(operandos.size()-1, ultimo.substring(0, ultimo.length()-1));
+						ultimoDigito=false;
+					}
+				}
+			});
+		}else if (n.equals("CLEAR")) {
+			boton.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					pantalla.setText("");
+					operandos.clear();
+					ultimoDigito=false;
+				}
+			});
+		}else if(n.equals("x")||n.equals("+")||n.equals("-")||n.equals("/")||n.equals("(")||n.equals(")")) {
+			boton.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					pantalla.setText(pantalla.getText()+n);
+					operandos.add(n);
+					ultimoDigito=false;
+				}
+				
+			});
+		}else if(n.equals("=")) {
+			boton.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					pantalla.setText("");
+					
+					ultimoDigito=false;
+					try {
+						resultado.setText(Double.toString(evaluar(operandos)));
+					}catch(Exception e1) {
+						resultado.setText("SINTAX ERROR");
+					}
+					operandos.clear();
+				}
+				
+			});
+			
+		}else if(n.equals(".")) {
+			boton.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					if(ultimoDigito) {
+						pantalla.setText(pantalla.getText()+n);
+						operandos.set(operandos.size()-1, operandos.get(operandos.size()-1)+n);
+						ultimoDigito=true;
+					}
+				}
+			});
+		}
+		
+	return boton;	
+		
+	}
+		
+	
+	public JButton createBoton(int n) {
+		JButton dev = new JButton(Integer.toString(n));
+		dev.setBackground(Color.cyan);
+		dev.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				pantalla.setText(pantalla.getText()+Integer.toString(n));
+				if(ultimoDigito) {
+					operandos.set(operandos.size()-1, operandos.get(operandos.size()-1)+Integer.toString(n));
+					
+				}else {
+					operandos.add(Integer.toString(n));
+				}
+				ultimoDigito=true;
+			}
+			
+		});
+		return dev;
+	}
+	
+	
+
+	private Double evaluar(ArrayList<String> comandos) throws Exception {
+		return evaluarPostfija(pasar_a_postfija(comandos));	
+		
+	}
+	
+	private ArrayList<String> pasar_a_postfija(ArrayList<String> comandos) {
+		
+		ArrayList<String> postfija=new ArrayList<String>();
+		Stack<String> operadores = new Stack<String>();
+		for (String c : comandos) {
+			if (isdigit(c))
+				postfija.add(c);
+			else if (c.equals("("))
+				operadores.push(c);
+			else if (c.equals(")")) {
+				String operador=operadores.pop();
+				while (!operador.equals("(")) {
+					postfija.add(operador);
+					operador=operadores.pop();
+				}
+				
+			} else { // c es operador
+				
+				while (!operadores.empty() && es_menor_ig(c, top(operadores))) {
+					postfija.add(top(operadores));
+					operadores.pop();
+				}
+				operadores.push(c);
+				
+				
+			}
+		}
+		while (!operadores.empty()) {
+			postfija.add(operadores.pop());
+		}
+		return postfija;	
+	}
+
+	private String top(Stack<String> operadores) {
+		String operador=operadores.pop();
+		operadores.push(operador);
+		return operador;
+	}
+
+	private boolean es_menor_ig(String c, String operador) {
+		if(operador.equals("("))
+			return false;
+		if(operador.equals("x")||operador.equals("/"))
+			return true;
+		if(c.equals("x")||c.equals("/"))
+			return false;
+		if(operador.equals("+")||c.equals("-"))
+			return true;
+	
+		return false;
+	}
+
+	private Double evaluarPostfija(ArrayList<String> expresion) throws Exception { 
+		Stack<Double> pila = new Stack<Double>();
+		for (String c : expresion) {
+			if (isdigit(c))
+				pila.push(Double.valueOf(c));
+			else {
+				Double op2 = pila.pop();
+				Double op1 = pila.pop();
+				pila.push(aplicar(c, op1, op2));
+			}
+		}
+		Double sol= pila.pop();
+		if(!pila.empty())
+			throw new Exception();
+		return sol;
+	}
+		
+	
+	private Double aplicar(String c, Double op1, Double op2) throws Exception {
+		if(c.equals("x"))
+			return op1*op2;
+		if(c.equals("+"))
+			return op1+op2;
+		if(c.equals("-"))
+			return op1-op2;
+		if(op2!=0)
+			return op1/op2;
+		throw new Exception();
+	}
+
+	
+	private boolean isdigit(String n) {
+		if(n.equals("x")||n.equals("+")||n.equals("-")||n.equals("/")||n.equals("(")||n.equals(")"))
+			return false;
+		return true;
+	}
+
+	
+	public static void main(String[] args) {
+		SwingUtilities.invokeLater(new Runnable() {
+			@Override
+			public void run() {
+				new Calculadora();
+			}
+			
+		});
+
+	}
+
+}

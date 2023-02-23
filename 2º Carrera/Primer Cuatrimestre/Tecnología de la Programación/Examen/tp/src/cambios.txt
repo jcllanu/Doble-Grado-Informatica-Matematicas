@@ -1,0 +1,18 @@
+Juan Carlos Llamas Núñez
+
+Clases creadas:
+HyperspaceCommand: funcionamiento de comando análogo a los demás comandos(parse, execute y constructor)
+HyperspaceException: excepción análoga a las demás excepciones
+WarmUpEngineExcepcion: excepción análoga a las demás excepciones
+Barrier: hereda de GameObject e implementa el funcionamiento descrito. En general no hace nada salvo recivir los impactos de bombas y laseres
+Mode
+
+Clases modificadas:
+UCMShip: incluir el dato hyperspace y getters y setters y constructor
+Game: en esta se hga tenido que añadir fucniones como hyperspace y modificar otras (sobre todo move) como shockwave, shootLaser, serialize, data,
+BoardInitializer: introducir una fucnión inicializarbarriers para iniciar las barreras incluyendo también modificaciones en la clase Level para obtener constantes como numero de barreras, posicion de la barrera inicial o separacion.
+Command generator: añadir CommandHyperspace a la lista
+NoneCommand: actualizar el hyperspace
+MoveCommand: tratamiento de las excepciones nuevas en el execute y cambio del parse para aceptar un número entero cualquiera
+IPlayerController: la interfaz ha recerido de modificaciones para que los métodos lancen excepciones como HyperspaceException o WarmUpEngineExcepcion
+

@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\Users\llama\Desktop\Mates-Infor\2º Carrera\Primer Cuatrimestre\Tecnología de la Programación\.metadata\.plugins\org.eclipse.jdt.core
+2175910664.index
+3039884273.index

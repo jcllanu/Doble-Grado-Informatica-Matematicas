@@ -1,0 +1,29 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[spanish]{babel}
+
+\usepackage[top=1cm, bottom=1.25cm, left=1.25cm, right=1.25cm]{geometry}
+\usepackage{amsthm}
+\usepackage{blindtext}
+
+\newtheorem{teoremaEspectral}{Teorema}
+
+\begin{document}
+
+    \title{Ejercicio 1}
+    \author{Juan Carlos Llamas Núñez}
+    \maketitle
+  
+    \begin{teoremaEspectral}
+    Sea $E$ un espacio vectorial euclídeo y sea $f \in \textrm{End}(E)$ un endomorfismo simétrico (autoadjunto) , entonces, $\exists \{\vec{u}_1,\vec{u}_2,...,\vec{u}_n\}$ base ortonormal de E formada por vectores proios de f.
+        
+       
+        \begin{proof}
+        Supongamos  $f \in \textrm{End}(E)$ autoadjunto. Entonces, todas las raices de su polinomio característico C(X) son reales y $f$ es diagonalizable. Esto se da ya que si tomamos la matriz $a$ de $f$ en una base ortonormal los valores propios de $a$ son reales. Como $f$ es autoadjunto, $a$ es simétrica y sabemos que $a$ es diagonalizable, y por extensión $f$ también lo es. Por lo anterior podemos expresar $E$ como $E=\bigoplus^{n}_{j=1} E(\lambda_{j})$, donde $\bigoplus$ representa la suma directa y $E(\lambda_{j})$ los subsepacios generados por los vectores propios con valores propios $\lambda_{1}, \lambda_{2},...,\lambda_{n}$. Como los subespacios  $E(\lambda_{j})$ son perpendiculares entre sí, yuxtaponiendo bases ortonormales de los subespacios $E(\lambda_{j})$ se tiene una base ortonormal de $E$. 
+        \end{proof}
+
+    \end{teoremaEspectral}
+    
+    
+    
+\end{document}

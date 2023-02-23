@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\llama\Desktop\Mates-Infor\2º Carrera\Primer Cuatrimestre\Tecnología de la Programación\Prácticas\Laboratorio\tp"/>
+			<item value="C:\Users\llama\Desktop\Mates-Infor\2º Carrera\Primer Cuatrimestre\Tecnología de la Programación\Prácticas\Práctica 3\tp"/>
+			<item value="C:\Users\llama\Desktop\Mates-Infor\2º Carrera\Primer Cuatrimestre\Tecnología de la Programación\Prácticas\Práctica 2\tp"/>
+			<item value="C:\Users\llama\Desktop\Mates-Infor\2º Carrera\Primer Cuatrimestre\Tecnología de la Programación\Prácticas\Práctica 2"/>
+			<item value="C:\Users\llama\Desktop\tp (5)-20191012T171239Z-001"/>
+			<item value="C:\Users\llama\Desktop\Mates-Infor\2º Carrera\Primer Cuatrimestre\Tecnología de la Programación\Prácticas\Práctica 1\tp"/>
+		</list>
+	</section>
+</section>

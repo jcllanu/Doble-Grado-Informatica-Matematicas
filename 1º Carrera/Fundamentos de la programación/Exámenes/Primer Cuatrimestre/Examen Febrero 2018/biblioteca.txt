@@ -1,0 +1,9 @@
+10 La ciudad de los prodigios
+Mendoza 30 30
+15 La celestina
+Rojas 40 2
+9 Martin Chuzzlewit
+Dickens 30 5
+13 El laberinto de las aceitunas
+Mendoza 80 5
+-1

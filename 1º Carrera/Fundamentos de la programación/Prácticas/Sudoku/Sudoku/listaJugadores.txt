@@ -1,0 +1,9 @@
+Ana 78
+Ander 3
+Andrés 4
+Isabel 9
+Ismael 9
+Luis 2
+Mario 7
+Paula 3
+Victoria 5

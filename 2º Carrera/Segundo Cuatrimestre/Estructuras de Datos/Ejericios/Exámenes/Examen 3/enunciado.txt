@@ -1,0 +1,30 @@
+Problema 3A
+
+
+Mi abuelo es un gran aficionado a los juegos online. Por la noche después de la cena se conecta y pasa un buen rato jugando. Cada día juega una partida a un único juego, al que puede haber jugado anteriormente o no. Le gusta tanto que es capaz de recordar cuándo ha jugado cada partida de cada juego. A veces le pregunto si recuerda cuándo fue la tercera vez que jugó al Minecraft y enseguida me contesta "Jugué por tercera vez el día 15". Para mi abuelo el día 1 es el primer día que jugó a algún juego online (si es que le han cambiado la vida). 
+
+Implementa un programa que ayude al abuelo a recordar cuándo ha jugado cada partida cuando ya no tenga tan buena memoria.
+
+Entrada
+La entrada está formada por una serie de casos de prueba. Cada caso comienza  por una línea con la cantidad N de noches en que el abuelo se ha conectado desde que empezó a jugar. En la siguiente línea aparecen los nombres de los juegos a los que ha jugado el abuelo cada noche (cada nombre es una cadena de caracteres sin espacios).  A continuación aparece un número M que indica el número de preguntas  que se van a hacer. Y en las siguientes M líneas aparecen las preguntas:  cada una consta de un número k y el nombre de un juego, como "Parchis", que representan la pregunta "¿Cuándo jugaste por k-ésima vez al Parchis?".
+
+Salida
+Se escribirá una línea por cada pregunta con el día en que el abuelo jugó por k-ésima vez al juego. Recuerda que el primer día en que el abuelo jugó (a cualquier juego) se considera el día 1. Si no ha jugado nunca a ese juego se escribirá NO JUEGA.
+Detrás de cada caso se escribirán tres guiones, ---.
+
+Entrada de ejemplo
+7
+Pacman Parchis Parchis SuperMario Pacman Parchis MineCraft
+5
+2 Pacman
+1 MineCraft
+3 Parchis
+1 Oca
+2 SuperMario
+Salida de ejemplo
+5
+7
+6
+NO JUEGA
+NO JUEGA
+---
