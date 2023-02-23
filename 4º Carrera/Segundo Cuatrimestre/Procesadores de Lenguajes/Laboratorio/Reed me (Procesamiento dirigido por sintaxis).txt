@@ -1,0 +1,29 @@
+1) Para evaluar expresiones a la vez que se reconocen usad el código que encontraréis en evaluadorExpresionesCUP.zip
+
+Ya se ha generado el analizador léxico con jflex y para generar el fichero Evaluador.java y ClaseLexica.java que hay en el directorio evaluadorExpresionesCUP/eval se ha usado como en la anterior sesión:
+
+java -cp $path/cup.jar java_cup.Main -parser Evaluador -symbols ClaseLexica -nopositions Eval.cup
+
+El resto es igual que en el apartado 2.
+
+2) Para generar el árbol de sintaxis abstracta (AST) usad el código que encontraréis en  constructorASTCUP.zip
+
+Descomprimid constructorASTCUP.zip
+
+La llamada a jflex ya está hecha y se ha obtenido AnalizadorLexicoExp.java
+
+Si no lo tenéis en el CLASSPATH, entonces sustituir $path por el camino hasta cup.jar. Si tenés el CLASSPATH bien definido -cp ... no hace falta.
+
+$ cd constructorASTCUP/constructorast
+
+$ java -cp $path/cup.jar java_cup.Main -parser ConstructorASTExp -symbols ClaseLexica -nopositions ConstructorAST.cup
+
+$ cd ..
+
+$ javac -cp "$path/cup.jar:." */*.java
+
+$ java -cp "$path/cup.jar:." constructorast.Main  input.txt
+
+Una vez estudiado el código, modificad el código de la carpeta ast eliminando las clases Mul y Sum y adaptando la clase EBin para no sea "abstract" y tenga un constructor que recibe el tipo de operación y los operandos e incluya los métodos tipo y toString. También es necesario modificar "ConstructorAST.cup" para que use el constructor de EBin para crear los nodos para la suma y la multiplicación.
+
+A continuación, extended el procesador para trabajar con el lenguaje de evaluación de expresiones (con evalúa) y/o para el lenguaje de listas de las anteriores sesiones de laboratorio.

@@ -1,0 +1,70 @@
+% Aquí comienza la resolución del ejercicio 2
+
+\textbf{2.} \textit{Sea $\mathbb{Q}_f \subset \mathbb{C}$ el cuerpo de descomposición sobre $\mathbb{Q}$ del polinomio $f(\mathtt{t}) := \mathtt{t}^8 - 2$.}
+\\
+(i)  \textit{Calcular el número de subextensiones de grado 8 de $\mathbb{Q}_f|\mathbb{Q}$.}
+\\
+(ii) \textit{¿Es diedral el grupo de Galois G$\mathrm{(}\mathbb{Q}_f:\mathbb{Q}\mathrm{)}$?}
+\\
+(iii) \textit{Encontrar un conjunto finito de generadores de una subextensión $F|\mathbb{Q}$ de $\mathbb{Q}_f|\mathbb{Q}$ tal que el grupo de Galois G$\mathrm{(}\mathbb{Q}_f:F\mathrm{)}$ sea cíclico de orden 8.}
+
+Para obtener el cuerpo de descomposición del polinomio $f$ sobre $\mathbb{Q}$ calculamos sus raíces. Sea $u:=\sqrt[8]{2}$ el único número real positivo cuya potencia octava es 2 y sea $\xi:=e^\frac{2\pi\mathtt{i}}{8}$ con $\mathtt{i}:=\sqrt{-1}$. Entonces las soluciones de $f(\mathtt{t})=0$ son $\mathtt{t}=u\xi^j$ con $j=0,1,...,7$. Por tanto, $\mathbb{Q}_f=\mathbb{Q}(u,u\xi,u\xi^2,u\xi^3,u\xi^4,u\xi^5,u\xi^6,u\xi^7)=\mathbb{Q}(u,\xi)$. En la segunda igualdad, el contenido hacia la derecha es inmediato y el contenido hacia la izquierda se sigue de que $\xi=\frac{u\xi}{u}\in\mathbb{Q}_f$. Queremos probar que $\mathbb{Q}(u,\xi)=\mathbb{Q}(u,\mathtt{i})$, ya que esta elección de representantes nos facilitará el trabajo en lo que sigue. De la igualdad  $\xi=\frac{\sqrt{2}}{2}+\frac{\sqrt{2}}{2}\mathtt{i}=\frac{u^4}{2}+\frac{u^4}{2}\mathtt{i}$ se obtiene el contenido hacia la derecha y despejando $\mathtt{i}$ como $\mathtt{i}=\xi\frac{2}{u^4}-1$, el otro contenido.
+
+Estamos ahora interesados en calcular el grado de la extensión $\mathbb{Q}_f|\mathbb{Q}$ para lo que utilizamos la transitividad del grado, es decir, $[\mathbb{Q}(u,\mathtt{i}):\mathbb{Q}]=[\mathbb{Q}(u,\mathtt{i}):\mathbb{Q}(u)]\cdot[\mathbb{Q}(u):\mathbb{Q}]$. El grado de la extensión $\mathbb{Q}(u)|\mathbb{Q}$ es fácil de calcular porque coincide con el grado del polinomio mínimo sobre $\mathbb{Q}$ de $u$. Veamos que $P_{\mathbb{Q},u}=f$. Pero esto es claro porque $f(u)=0$, $f\in\mathbb{Q}[\mathtt{t}]$, es mónico e irreducible en $\mathbb{Q}[\mathtt{t}]$. Para esto último, $f$ es irreducible en $\mathbb{Z}[\mathtt{t}]$ por el Criterio de Eisenstein para el primo 2 y por el Lema de Gauss también lo es en $\mathbb{Q}[\mathtt{t}]$. Por tanto, $[\mathbb{Q}(u):\mathbb{Q}]=\textrm{deg}(f)=8$. Por otro lado, $[\mathbb{Q}(u,\mathtt{i}):\mathbb{Q}(u)]\leq [\mathbb{Q}(\mathtt{i}):\mathbb{Q}]=2$ y esta desigualdad es en realidad una igualdad porque $\mathbb{Q}(u)\subset\mathbb{R}$ y $\mathbb{Q}(u,\mathtt{i})$ tiene elementos en $\mathbb{C}$. Por tanto, $[\mathbb{Q}(u,\mathtt{i}):\mathbb{Q}]=2\cdot8=16$. 
+
+Evidentemente, la extensión $\mathbb{Q}_f|\mathbb{Q}$ es de Galois por ser el cuerpo de descomposición de un polinomio, luego $\textrm{ord}(G_\mathbb{Q}(f))=16$. Los automorfismos de $\mathbb{Q}_f=\mathbb{Q}(u,\mathtt{i})$ quedan determinados por las imágenes de $u$ e $\mathtt{i}$. Cada automorfismo transforma estos elementos en raíces de su polinomio irreducible luego tenemos un máximo de $8\cdot2=16$ candidatos. Como $\textrm{ord}(G_\mathbb{Q}(f))=16$ todas estas asignaciones inducen automorfismos en $\mathbb{Q}_f$. Por tanto, $G_\mathbb{Q}(f)=\{\rho_{kl}:\; k\in\{0,1\},\;l\in\{0,1,...,7\}\}$, donde $\rho_{kl}(\mathtt{i})=(-1)^k\mathtt{i}$, $\rho_{kl}(u)=u\xi^l$, y por lo anterior,
+\[\rho_{kl}(\xi)=\rho_{kl}\left(\frac{u^4}{2}+\frac{u^4}{2}\mathtt{i}\right)=\frac{\rho_{kl}(u)^4}{2}+\frac{\rho_{kl}(u)^4}{2}\rho_{kl}(\mathtt{i})=\frac{(u\xi^l)^4}{2}+\frac{(u\xi^l)^4}{2}(-1)^k\mathtt{i}=
+\]
+\[
+\xi^{4l}\left(\frac{\sqrt{2}}{2}+\frac{\sqrt{2}}{2}(-1)^k\mathtt{i}\right)=\xi^{4l}\xi^{1-2k}.
+\]
+Para responder a las tres cuestiones que se preguntan es conveniente calcular el orden de los automorfismos.
+\begin{flushleft}
+$\rho_{0,0}(\mathtt{i})=\mathtt{i},\; \rho_{0,0}(u)=u$\\
+
+$\rho_{0,1}(\mathtt{i})=\mathtt{i},\;\rho_{0,1}(u)=u\xi,\;\;\rho_{0,1}(\xi)=\xi^5,\;
+u\shortrightarrow u\xi\shortrightarrow u\xi^6\shortrightarrow u\xi^7\shortrightarrow u\xi^4\shortrightarrow u\xi^5\shortrightarrow u\xi^2\shortrightarrow u\xi^3\shortrightarrow u$\\
+
+$\rho_{0,2}(\mathtt{i})=\mathtt{i},\;\rho_{0,2}(u)=u\xi^2,\;\rho_{0,2}(\xi)=\xi,\;\;
+u\shortrightarrow u\xi^2\shortrightarrow u\xi^4\shortrightarrow u\xi^6\shortrightarrow u$\\
+
+$\rho_{0,3}(\mathtt{i})=\mathtt{i},\;\rho_{0,3}(u)=u\xi^3,\;\rho_{0,3}(\xi)=\xi^5,\; \rho_{0,3}=\rho_{0,1}^{-1}$\\
+
+$\rho_{0,4}(\mathtt{i})=\mathtt{i},\;\rho_{0,4}(u)=u\xi^4,\;\rho_{0,4}(\xi)=\xi,\;\;
+u\shortrightarrow u\xi^4\shortrightarrow u$\\
+
+$\rho_{0,5}(\mathtt{i})=\mathtt{i},\;\rho_{0,5}(u)=u\xi^5,\;\rho_{0,5}(\xi)=\xi^5,\;
+u\shortrightarrow u\xi^5\shortrightarrow u\xi^6\shortrightarrow u\xi^3\shortrightarrow u\xi^4\shortrightarrow u\xi\shortrightarrow u\xi^2\shortrightarrow u\xi^7\shortrightarrow u$\\
+
+$\rho_{0,6}(\mathtt{i})=\mathtt{i},\;\rho_{0,6}(u)=u\xi^6,\;\rho_{0,6}(\xi)=\xi,\;\; \rho_{0,6}=\rho_{0,2}^{-1}$\\
+
+$\rho_{0,7}(\mathtt{i})=\mathtt{i},\;\rho_{0,7}(u)=u\xi^7,\;\rho_{0,7}(\xi)=\xi^5,\; \rho_{0,7}=\rho_{0,5}^{-1}$\\
+\end{flushleft}
+\begin{flushleft}
+$\rho_{1,0}(\mathtt{i})=-\mathtt{i},\; \rho_{1,0}(u)=u \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\mathtt{i}\shortrightarrow -\mathtt{i}\shortrightarrow \mathtt{i}$\\
+
+$\rho_{1,1}(\mathtt{i})=-\mathtt{i},\;\rho_{1,1}(u)=u\xi,\;\;\rho_{1,1}(\xi)=\xi^3,\;
+u\shortrightarrow u\xi\shortrightarrow u\xi^4\shortrightarrow u\xi^5\shortrightarrow u$\\
+
+$\rho_{1,2}(\mathtt{i})=-\mathtt{i},\;\rho_{1,2}(u)=u\xi^2,\;\rho_{1,2}(\xi)=\xi^7,\;
+u\shortrightarrow u\xi^2\shortrightarrow u$\\
+
+$\rho_{1,3}(\mathtt{i})=-\mathtt{i},\;\rho_{1,3}(u)=u\xi^3,\;\rho_{1,3}(\xi)=\xi^3,\; u\shortrightarrow u\xi^3\shortrightarrow u\xi^4\shortrightarrow u\xi^7\shortrightarrow u$\\
+
+$\rho_{1,4}(\mathtt{i})=-\mathtt{i},\;\rho_{1,4}(u)=u\xi^4,\;\rho_{1,4}(\xi)=\xi^7,\;
+u\shortrightarrow u\xi^4\shortrightarrow u$\\
+
+$\rho_{1,5}(\mathtt{i})=-\mathtt{i},\;\rho_{1,5}(u)=u\xi^5,\;\rho_{1,5}(\xi)=\xi^3,\; \rho_{1,5}=\rho_{1,1}^{-1}$\\
+
+$\rho_{1,6}(\mathtt{i})=-\mathtt{i},\;\rho_{1,6}(u)=u\xi^6,\;\rho_{1,6}(\xi)=\xi^7,\;
+u\shortrightarrow u\xi^6\shortrightarrow u$\\
+
+$\rho_{1,7}(\mathtt{i})=-\mathtt{i},\;\rho_{1,7}(u)=u\xi^7,\;\rho_{1,7}(\xi)=\xi^3,\; \rho_{1,7}=\rho_{1,3}^{-1}$
+\end{flushleft}
+Una vez conocemos los automorfismos del grupo de Galois y sus respectivos órdenes ya podemos responder todas las preguntas. 
+
+(i) En primer lugar, se pide calcular el número de subextensiones de grado 8 de $\mathbb{Q}_f|\mathbb{Q}$. Por el Teorema fundamental de la teoría de Galois, existe una biyección entre las subextensiones de $\mathbb{Q}_f|\mathbb{Q}$ y los subgrupos de $G_\mathbb{Q}(f)$, por lo que este número de subextensiones de grado 8 será igual al número de subgrupos de orden $2=\frac{16}{8}$. El número de subgrupos de orden 2 es igual al número de elementos de orden 2, porque cada elemento de orden 2 genera un subgrupo formado por él mismo y la identidad. Como $G_\mathbb{Q}(f)$ tiene 5 elementos de orden 2 concluimos que hay 5 subextensiones de grado 8 de $\mathbb{Q}_f|\mathbb{Q}$. 
+
+(ii) Después se pregunta si $G_\mathbb{Q}(f)$ es diedral. Un argumento sencillo para demostrar que  $G_\mathbb{Q}(f)$ no es isomorfo a $\mathscr{D}_8$ es contar el número de elementos de orden 2 que hay en cada uno de los grupos y ver que no coinciden. Hemos visto que $G_\mathbb{Q}(f)$ tiene 5 elementos de orden 2 y $\mathscr{D}_8$ tiene como elementos de orden 2 las 8 simetrías y la rotación de ángulo $\pi$, en total 9. Por tanto $G_\mathbb{Q}(f)$ no es isomorfo a $\mathscr{D}_8$. 
+
+(iii) Por último, se pide encontrar un grupo finito de generadores de una subextensión $F|\mathbb{Q}$ de $\mathbb{Q}_f|\mathbb{Q}$ tal que $G(\mathbb{Q}_f:F)$ sea cíclico de orden 8. Podemos tomar $F$ de tal forma que $G(\mathbb{Q}_f:F)=\langle\rho_{0,1}\rangle$ con lo que $F=\mathrm{Fix}(\langle\rho_{0,1}\rangle)=\mathbb{Q}(\mathtt{i})$, que efectivamente es una subextensión de grado 2 y $G(\mathbb{Q}_f:F)$ es cíclico de orden 8.

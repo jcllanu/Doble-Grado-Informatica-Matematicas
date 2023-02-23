@@ -1,0 +1,55 @@
+Para realizar la práctica de recuperación de errores sintácticos usad el código que encontraréis en RecuperacionErroresCUP.zip
+
+Descomprimid RecuperacionErroresCUP.zip
+
+Notad que en errors/GestionErroresTiny.java hemos comentado System.exit(1); para que continúe el proceso de análisis sintáctico y hemos añadido un try/catch en 
+
+asint/Main.java
+
+La llamada a jflex ya está hecha y se ha obtenido AnalizadorLexicoTiny.java
+
+Si no lo tenéis en el CLASSPATH, entonces sustituir $path por el camino hasta cup.jar. Si tenéis el CLASSPATH bien definido -cp ... no hace falta. 
+
+$ cd RecuperacionErroresCUP/asint
+
+$ java -cp $path/cup.jar java_cup.Main -parser AnalizadorSintacticoTiny -symbols ClaseLexica -nopositions TinyErrors.cup
+
+$ cd ..
+
+$ javac -cp "$path/cup.jar:." */*.java
+
+$ java -cp "$path/cup.jar:." asint.Main  input.txt
+
+$ java -cp "$path/cup.jar:." asint.Main  input-error.txt
+
+Una vez estudiado el código TinyErrors.cup,  realizad los siguientes apartados:
+
+1) Comentad la línea 30 ( | error; ) y añadid un ; al final de la línea 28.
+
+Repetid la compilación del cup y la del java generado y volved a ejecutar
+
+$ java -cp "$path/cup.jar:." asint.Main  input-error.txt
+
+Comparad la salida
+
+Deshaced los cambios.
+
+2) Haced lo mismo con lo que indica en el comentario
+
+// 2 (descomentar esta línea y comentar siguiente)
+
+de la línea 29.
+
+3) A continuación haced lo mismo con el comentario
+
+// 3 (descomentar esta línea y borrar ; anterior)
+
+de la línea 36.
+
+4) Y repetidlo con el comentario
+
+// 4 (descomentar esta línea y borrar ; anterior)
+
+de la línea 38.
+
+Finalmente realizad modificaciones introduciendo reglas para recuperación de errores en gramáticas que tengáis.

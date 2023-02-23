@@ -1,0 +1,48 @@
+consulta :- write('Pregunta: '), read(Pregunta),procesa(Pregunta).
+procesa(Xs) :-atomic_list_concat(L," ", Xs), pregunta1(Nombre, Atributo, L, []),empleado(Nombre, Atributo, Valor),write(' Respuesta: '), write(Valor), nl.
+pregunta1(Nombre, Atributo)-->comienzo(TieneDet), det(TieneDet), atributo(Atributo), verbo(TieneDet), nombre(Nombre).
+
+comienzo(si)-->[cual, es].
+comienzo(si)-->[dime].
+comienzo(no)-->[que].
+comienzo(no)-->[dime, que].
+
+det(no)-->[].
+det(si)-->[Input],{determinante(Input)}.
+
+atributo(Atributo)-->[Atributo],{es_atributo(Atributo)}.
+
+verbo(no)-->[tiene].
+verbo(si)-->[de].
+
+nombre(Nombre)-->[Nombre],{es_nombre(Nombre)}.
+
+determinante(el).
+determinante(la).
+
+es_atributo(Atributo):-empleado(_,Atributo,_).
+es_nombre(Nombre):-empleado(Nombre,_,_).
+
+empleado(martinez,edad,42).
+empleado(perez,edad,27).
+empleado(garcia,edad,34).
+empleado(sanchez,edad,72).
+empleado(martin,edad,56).
+empleado(lopez,edad,31).
+empleado(ruiz,edad,40).
+
+empleado(martinez,salario,42000).
+empleado(perez,salario,27000).
+empleado(garcia,salario,34000).
+empleado(sanchez,salario,72000).
+empleado(martin,salario,56000).
+empleado(lopez,salario,31000).
+empleado(ruiz,salario,40000).
+
+empleado(martinez,departamento,contabilidad).
+empleado(perez,departamento,finanzas).
+empleado(garcia,departamento,imasd).
+empleado(sanchez,departamento,contabilidad).
+empleado(martin,departamento,contabilidad).
+empleado(lopez,departamento,finanzas).
+empleado(ruiz,departamento,finanzas).

@@ -1,0 +1,105 @@
+
+;;; ENRIQUE REY GISBERT
+;;; ALBERTO ALMAGRO SÁNCHEZ
+;;; JUAN CARLOS LLAMAS NÚÑEZ
+
+;;;=======================================================
+;;;
+;;;     Ingeniería del Conocimiento (Concesionario ENALJECA)    
+;;;
+;;;=======================================================
+
+;;****************
+;;* INFORMACION *
+;;****************
+
+;;; Aspectos relevantes: Autonomía, Puntos de Recarga, Precio, Coste Dia a Dia, Ventajas Ecológicas.
+
+;;; ELECTRICO: Poca autonomia, mas economicos en el dia a dia que los hibridos, ventajas ecologicas, mas caros y menos contaminantes.
+;;; HIBRIDO: Más autonomia y menos caros que un electrico, ventajas ecologicas menores, precio razonable.
+;;; GASOLINA: Más baratos, no tienen ventajas ecologicas considerables, muchas gasolineras y mucha autonomia.
+;;; DIESEL: Muy contaminantes, ninguna ventaja ecológica, precio razonable, caros en el dia a dia y muchas gasolineras.
+;;; Gas GNC: Autonomía razonable, muy baratos en el dia a dia, menos gasolineras, ventajas ecologicas menores, precio razonable.
+;;; GLP: Un poco menos contaminantes que los de gasolina, menos gasolineras, pocas ventajas ecologicas y un poco mas baratos en el dia a dia.
+
+;;;  1   Para el dia a dia
+;;;	   1.1    Hacer viajes largos (+ 2 horas)
+;;;		1.1.1    Gama alta
+;;;			1.1.1.1    Aprovecharse de ventajas ecologicas
+;;;				HIBRIDO
+;;;			1.1.1.2    No aprovecharse de ventajas ecologicas
+;;;				GASOLINA
+;;;		1.1.2    Gama baja
+;;;			1.1.1.1    Aprovecharse de ventajas ecologicas
+;;;                             HIBRIDO
+;;;			1.1.1.2    No aprovecharse de ventajas ecologicas
+;;;				1.1.1.2.1   Tiene estaciones con GLP en los destinos usuales
+;;;                             	GLP
+;;;				1.1.1.2.2   No tiene estaciones con GLP en los destinos usuales
+;;;					GASOLINA
+;;;        1.2    Hacer viajes por ciudad cortos
+;;;		1.2.1    Gama alta
+;;;			1.2.1.1    Aprovecharse de ventajas ecologicas
+;;;                             ELECTRICO
+;;;			1.2.1.2    No aprovecharse de ventajas ecologicas
+;;;				1.2.1.2.1   Tiene estaciones con Gas GNC en su ciudad
+;;;                             	Gas GNC
+;;;				1.2.1.2.2   No tiene estaciones con Gas GNC en su ciudad
+;;;					GASOLINA
+;;;		1.2.2    Gama baja
+;;;			1.2.2.1    Aprovecharse de ventajas ecologicas
+;;;                             HIBRIDO
+;;;			1.2.2.2    No aprovecharse de ventajas ecologicas
+;;;                             GASOLINA
+;;;  2   Para usar de vez en cuando
+;;;        2.1    Hacer viajes largos (+ 2 horas)
+;;;		2.1.1    Gama alta
+;;;			2.1.1.1    Aprovecharse de ventajas ecologicas
+;;;                             HIBRIDO
+;;;			2.1.1.2    No aprovecharse de ventajas ecologicas
+;;;                             DIESEL
+;;;		2.1.2    Gama baja
+;;;			2.1.2.1    Aprovecharse de ventajas ecologicas
+;;;                             HIBRIDO
+;;;			2.1.2.2    No aprovecharse de ventajas ecologicas
+;;;				2.1.2.2.1   Tiene estaciones con GLP en su ciudad
+;;;                             	GLP
+;;;				2.1.2.2.2   No tiene estaciones con GLP en su ciudad
+;;;					GASOLINA
+;;;        2.2    Hacer viajes por ciudad cortos
+;;;		2.2.1    Gama alta
+;;;			2.2.1.1    Aprovecharse de ventajas ecologicas
+;;;                             ELECTRICO
+;;;			2.2.1.2    No aprovecharse de ventajas ecologicas
+;;;                             GASOLINA
+;;;		2.2.2    Gama baja
+;;;			2.2.2.1    Aprovecharse de ventajas ecologicas
+;;;                             HIBRIDO
+;;;			2.2.2.2    No aprovecharse de ventajas ecologicas
+;;;				2.2.2.2.1   Tiene estaciones con Gas GNC en su ciudad
+;;;                             	Gas GNC
+;;;				2.2.2.2.2   No tiene estaciones con Gas GNC en su ciudad
+;;;					2.2.2.2.2.1   Tiene estaciones con GLP en su ciudad
+;;;                             		GLP
+;;;					2.2.2.2.2.2   No tiene estaciones con GLP en su ciudad
+;;;						GASOLINA
+
+;;****************
+;;* BIBLIOGRAFIA *
+;;****************
+
+;;;  (Ascauto - Web expositores de vehículos, 2021)
+;;;  Ascauto. 2021. Ascauto - Web expositores de vehículos. [online] Disponible en: <https://ascauto.es/> [Acceso 3 Diciembre 2021].
+
+;;;  (Dacia España: gama, precios de los modelos, compra de coches nuevos, 2021)
+;;;  Dacia.es. 2021. Dacia España: gama, precios de los modelos, compra de coches nuevos. [online] Disponible en: <https://www.dacia.es/> [Acceso 12 Diciembre 2021].
+
+;;;  (Eléctricos, 2021)
+;;;  Eléctricos, H., 2021. Híbridos y Eléctricos | Coches eléctricos, híbridos enchufables. [online] Híbridos y Eléctricos. Disponible en: <https://www.hibridosyelectricos.com/> [Acceso 29 Noviembre 2021].
+
+;;;  (Ventajas de la etiqueta eco en un coche. Beneficios en Madrid y Barcelona, 2021)
+;;;  Rentingcoches.com. 2021. Ventajas de la etiqueta eco en un coche. Beneficios en Madrid y Barcelona. [online] Disponible en: <https://rentingcoches.com/blog/ventajas-etiqueta-eco> [Acceso 7 Diciembre 2021].
+
+;;;  (Diesel o Gasolina: ¿Qué es mejor?, 2021)
+;;;  https://www.clicars.com/blog. 2021. Diesel o Gasolina: ¿Qué es mejor?. [online] Disponible en: <https://www.clicars.com/blog/comparativa/que-es-mejor-diesel-o-gasolina/> [Acceso 4 Diciembre 2021].
+ 

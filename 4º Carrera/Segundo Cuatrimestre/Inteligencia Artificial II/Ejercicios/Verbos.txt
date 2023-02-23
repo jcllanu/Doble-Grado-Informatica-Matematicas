@@ -1,0 +1,111 @@
+frase(f(gn(N),gv(V)))-->sujeto(Persona,Numero,N),verbo(Verbo,Tiempo,Persona,Numero,V).
+frase(f(gn(N),gv(V,CD)))-->sujeto(Persona,Numero,N),verbo(Verbo,Tiempo,Persona,Numero,V), complemento_directo(Verbo,CD).
+frase(f(gn(N),gv(V,CC)))-->sujeto(Persona,Numero,N),verbo(Verbo,Tiempo,Persona,Numero,V), complemento_circunstancial(Verbo,CC).
+frase(f(gn(N),gv(V,CD,CC)))-->sujeto(Persona,Numero,N),verbo(Verbo,Tiempo,Persona,Numero,V), complemento_directo(Verbo,CD), complemento_circunstancial(Verbo,CC).
+
+sujeto(Persona,Numero,N)-->pronombre_personal(Persona,Numero,N).
+sujeto(3,singular,N)-->nombre_propio(N).
+sujeto(3,Numero,N)-->det_nombre_comun(Numero,N).
+sujeto(3,Numero,N)-->nombre_comun(Numero,N).
+
+pronombre_personal(Persona,Numero,pp(Input))-->[Input],{pronombre(Input,Persona,Numero)}.
+nombre_propio(np(Input))-->[Input],{nombr_prop(Input)}
+det_nombre_comun(Numero,d_nc(D,C))-->determinante(Numero,Genero,D),nombre_comun(Numero,Genero,C).
+nombre_comun(Numero,Genero,nc(Input))-->[Input],{nombr(Input,Numero,Genero)}.
+determinante(Numero,Genero,det(Input))-->[Input],{determ(Input,Numero,Genero)}.
+
+verbo(Verbo,Tiempo,Persona,Numero,v(Input))-->[Input],{verb(Input,Verbo,Tiempo,Persona,Numero)}.
+
+complemento_directo(Verbo,cd(CD))-->objeto(CD),{transitivo(Verbo)}.
+objeto(CD)-->nombre_propio(CD).
+objeto(CD)-->det_nombre_comun(Numero,Genero,CD).
+objeto(CD)-->nombre_comun(Numero,Genero,CD).
+
+complemento_circunstancial(Verbo,cc(P,O))-->prep(Preposicion,P),objeto(O), {preposicion(Verbo,Preposicion)}.
+prep(Preposicion,prp(Preposicion))-->[Preposicion].
+
+verb(Input,Verbo,Tiempo,Persona,Numero):-name(Input,InputCad), append(RaizCad,TermCad,InputCad), name(Terminacion,TermCad), terminaciones(Terminacion, Tiempo, Persona, Numero), name("ar",InfinitivoCad), append(RaizCad,InfinitivoCad,VerboCad),name(Verbo,VerboCad).
+
+preposicion(hablar,con).
+preposicion(jugar,en).
+preposicion(cantar,en).
+preposicion(enviar,a).
+transitivo(enviar).
+
+
+nombr_prop(luis).
+nombr_prop(david).
+nombr_prop(julia).
+nombr_prop(pedro).
+
+determ(el,singular,masculino).
+determ(la,singular,femenino).
+determ(los,plural,masculino).
+determ(las,plural,femenino).
+determ(un,singular,masculino).
+determ(una,singular,femenino).
+determ(unos,plural,masculino).
+determ(unas,plural,femenino).
+determ(este,singular,masculino).
+determ(esta,singular,femenino).
+determ(estos,plural,masculino).
+determ(estas,plural,femenino).
+determ(ese,singular,masculino).
+determ(esa,singular,femenino).
+determ(esos,plural,masculino).
+determ(esas,plural,femenino).
+
+nombr(flor,singular,femenino).
+nombr(flores,plural,femenino).
+nombr(nino,singular,masculino).
+nombr(ninos,plural,masculino).
+nombr(nina,singular,femenino).
+nombr(ninas,plural,femenino).
+nombr(cartas,plural,femenino).
+
+pronombre(yo,1,singular).
+pronombre(tu,2,singular).
+pronombre(el,3,singular).
+pronombre(ella,3,singular).
+pronombre(nosotros,1,plural).
+pronombre(vosotros,2,plural).
+pronombre(nosotras,1,plural).
+pronombre(vosotras,2,plural).
+pronombre(ellas,3,plural).
+pronombre(ellos,3,plural).
+
+terminaciones(o, presente, 1, singular).
+terminaciones(as, presente, 2, singular).
+terminaciones(a, presente, 3, singular).
+terminaciones(amos, presente, 1, plural).
+terminaciones(ais, presente, 2, plural).
+terminaciones(an, presente, 3, plural).
+
+terminaciones(aba, imperfecto, 1, singular).
+terminaciones(abas, imperfecto, 2, singular).
+terminaciones(aba, imperfecto, 3, singular).
+terminaciones(abamos, imperfecto, 1, plural).
+terminaciones(abais, imperfecto, 2, plural).
+terminaciones(aban, imperfecto, 3, plural).
+
+terminaciones(e, perterito, 1, singular).
+terminaciones(aste, perterito, 2, singular).
+terminaciones(o, perterito, 3, singular).
+terminaciones(amos, perterito, 1, plural).
+terminaciones(abasteis, perterito, 2, plural).
+terminaciones(aron, perterito, 3, plural).
+
+terminaciones(are, futuro, 1, singular).
+terminaciones(aras, futuro, 2, singular).
+terminaciones(ara, futuro, 3, singular).
+terminaciones(aremos, futuro, 1, plural).
+terminaciones(areis, futuro, 2, plural).
+terminaciones(arán, futuro, 3, plural).
+
+terminaciones(aria, condicional, 1, singular).
+terminaciones(arias, condicional, 2, singular).
+terminaciones(aria, condicional, 3, singular).
+terminaciones(ariamos, condicional, 1, plural).
+terminaciones(ariais, condicional, 2, plural).
+terminaciones(arian, condicional, 3, plural).
+
