@@ -1,0 +1,15 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+C:/ProyectosVivaldo/p5_avanzado/p5_avanzado.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+C:/ProyectosVivaldo/p5_avanzado/p5_avanzado.srcs/sim_1/new/tb_maquina_tragaperras.vhd,1607938720,vhdl,,,,tb_tragaperras,,,,,,,,
+C:/ProyectosVivaldo/p5_avanzado/p5_avanzado.srcs/sources_1/ip/memoria1/sim/memoria1.v,1607938008,verilog,,,,memoria1,,,,,,,,
+C:/ProyectosVivaldo/p5_avanzado/p5_avanzado.srcs/sources_1/ip/memoria2/sim/memoria2.v,1607938047,verilog,,C:/ProyectosVivaldo/p5_avanzado/p5_avanzado.srcs/sources_1/ip/memoria1/sim/memoria1.v,,memoria2,,,,,,,,
+C:/ProyectosVivaldo/p5_avanzado/p5_avanzado.srcs/sources_1/new/conv_7seg.vhd,1607937949,vhdl,,,,conv_7seg,,,,,,,,
+C:/ProyectosVivaldo/p5_avanzado/p5_avanzado.srcs/sources_1/new/debouncer.vhd,1607937945,vhdl,,,,debouncer,,,,,,,,
+C:/ProyectosVivaldo/p5_avanzado/p5_avanzado.srcs/sources_1/new/displays.vhd,1607937947,vhdl,,,,displays,,,,,,,,
+C:/ProyectosVivaldo/p5_avanzado/p5_avanzado.srcs/sources_1/new/divisor.vhd,1607937942,vhdl,,,,divisor,,,,,,,,
+C:/ProyectosVivaldo/p5_avanzado/p5_avanzado.srcs/sources_1/new/modulo_tragaperras.vhd,1607937939,vhdl,,,,tragaperras,,,,,,,,
+C:/ProyectosVivaldo/p5_avanzado/p5_avanzado.srcs/sources_1/new/ruta_datos.vhd,1607939181,vhdl,,,,cd,,,,,,,,
+C:/ProyectosVivaldo/p5_avanzado/p5_avanzado.srcs/sources_1/new/unidad_control.vhd,1607937944,vhdl,,,,uc,,,,,,,,

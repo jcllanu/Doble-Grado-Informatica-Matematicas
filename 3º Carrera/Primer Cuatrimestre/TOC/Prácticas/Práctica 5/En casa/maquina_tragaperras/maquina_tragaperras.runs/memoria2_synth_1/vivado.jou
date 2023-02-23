@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Dec 13 11:35:06 2020
+# Process ID: 15444
+# Current directory: C:/ProyectosVivaldo/maquina_tragaperras/maquina_tragaperras.runs/memoria2_synth_1
+# Command line: vivado.exe -log memoria2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source memoria2.tcl
+# Log file: C:/ProyectosVivaldo/maquina_tragaperras/maquina_tragaperras.runs/memoria2_synth_1/memoria2.vds
+# Journal file: C:/ProyectosVivaldo/maquina_tragaperras/maquina_tragaperras.runs/memoria2_synth_1\vivado.jou
+#-----------------------------------------------------------
+source memoria2.tcl -notrace

@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Dec 11 18:32:04 2020
+# Process ID: 12800
+# Current directory: C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 2/En casa/candado_impl
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7244 C:\Users\llama\Desktop\Mates-Infor\Tercero\TOC\Práctica 2\En casa\candado_impl\candado_impl.xpr
+# Log file: C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 2/En casa/candado_impl/vivado.log
+# Journal file: C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 2/En casa/candado_impl\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 2/En casa/candado_impl/candado_impl.xpr}
+INFO: [Project 1-313] Project file moved from 'C:/ProyectosVivaldo/candado_impl' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [filemgmt 56-1] Board Part Repository Path: Directory not found as 'C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 2/Users/llama/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store'; using path 'C:/Users/llama/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store' instead.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado19/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 875.543 ; gain = 249.203
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 11 18:32:47 2020...

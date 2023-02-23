@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Oct 17 15:51:17 2020
+# Process ID: 9884
+# Current directory: C:/ProyectosVivaldo/lab1b/lab1b.runs/impl_1
+# Command line: vivado.exe -log registro_paralelo.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source registro_paralelo.tcl -notrace
+# Log file: C:/ProyectosVivaldo/lab1b/lab1b.runs/impl_1/registro_paralelo.vdi
+# Journal file: C:/ProyectosVivaldo/lab1b/lab1b.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source registro_paralelo.tcl -notrace

@@ -1,0 +1,6 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/ProyectosVivaldo/multiplicador1/multiplicador1.srcs/sources_1/imports/new/adder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'adder8b'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/ProyectosVivaldo/multiplicador1/multiplicador1.srcs/sources_1/new/multiplicador_sumador.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'multiplicador_sumador'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/ProyectosVivaldo/multiplicador1/multiplicador1.srcs/sim_1/imports/Desktop/tb_mult.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_mult8'

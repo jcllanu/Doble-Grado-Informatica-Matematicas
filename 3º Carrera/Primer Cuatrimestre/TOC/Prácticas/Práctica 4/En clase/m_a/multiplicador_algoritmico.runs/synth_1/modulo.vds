@@ -1,0 +1,74 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Nov 30 10:36:33 2020
+# Process ID: 3564
+# Current directory: C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.runs/synth_1
+# Command line: vivado.exe -log modulo.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source modulo.tcl
+# Log file: C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.runs/synth_1/modulo.vds
+# Journal file: C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source modulo.tcl -notrace
+Command: synth_design -top modulo -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13760 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 827.242 ; gain = 177.043
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'modulo' [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/new/modulo.vhd:19]
+	Parameter width bound to: 4 - type: integer 
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'multiplicador' declared at 'C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/new/multiplicador.vhd:5' bound to instance 'mult' of component 'multiplicador' [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/new/modulo.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'multiplicador' [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/new/multiplicador.vhd:17]
+	Parameter width bound to: 4 - type: integer 
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'cd' declared at 'C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/Desktop/cd.vhd:7' bound to instance 'i_cd' of component 'cd' [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/new/multiplicador.vhd:51]
+INFO: [Synth 8-638] synthesizing module 'cd' [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/Desktop/cd.vhd:19]
+	Parameter width bound to: 4 - type: integer 
+	Parameter width bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'mux_widthbits_2op' declared at 'C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/new/mux_8bits_2op.vhd:5' bound to instance 'mux_a' of component 'mux_widthbits_2op' [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/Desktop/cd.vhd:109]
+INFO: [Synth 8-638] synthesizing module 'mux_widthbits_2op' [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/new/mux_8bits_2op.vhd:14]
+	Parameter width bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux_widthbits_2op' (1#1) [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/new/mux_8bits_2op.vhd:14]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'mux_widthbits_2op' declared at 'C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/new/mux_8bits_2op.vhd:5' bound to instance 'mux_b' of component 'mux_widthbits_2op' [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/Desktop/cd.vhd:119]
+INFO: [Synth 8-638] synthesizing module 'mux_widthbits_2op__parameterized1' [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/new/mux_8bits_2op.vhd:14]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux_widthbits_2op__parameterized1' (1#1) [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/new/mux_8bits_2op.vhd:14]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'mux_widthbits_2op' declared at 'C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/new/mux_8bits_2op.vhd:5' bound to instance 'mux_n' of component 'mux_widthbits_2op' [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/Desktop/cd.vhd:129]
+	Parameter width bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'mux_widthbits_2op' declared at 'C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/new/mux_8bits_2op.vhd:5' bound to instance 'mux_acc' of component 'mux_widthbits_2op' [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/Desktop/cd.vhd:139]
+	Parameter width bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'adder8b' declared at 'C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/lab1a/adder.vhd:5' bound to instance 'sumador' of component 'adder8b' [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/Desktop/cd.vhd:207]
+INFO: [Synth 8-638] synthesizing module 'adder8b' [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/lab1a/adder.vhd:12]
+	Parameter width bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder8b' (2#1) [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/lab1a/adder.vhd:12]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'restador4b' declared at 'C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/new/restador.vhd:5' bound to instance 'restador' of component 'restador4b' [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/Desktop/cd.vhd:218]
+INFO: [Synth 8-638] synthesizing module 'restador4b' [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/new/restador.vhd:12]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'restador4b' (3#1) [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/new/restador.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'cd' (4#1) [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/Desktop/cd.vhd:19]
+INFO: [Synth 8-3491] module 'uc' declared at 'C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/Desktop/uc.vhd:5' bound to instance 'i_uc' of component 'uc' [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/new/multiplicador.vhd:63]
+INFO: [Synth 8-638] synthesizing module 'uc' [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/Desktop/uc.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'uc' (5#1) [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/Desktop/uc.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'multiplicador' (6#1) [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/new/multiplicador.vhd:17]
+INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/new/debouncer.vhd:5' bound to instance 'deb' of component 'debouncer' [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/new/modulo.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'debouncer' [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/new/debouncer.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'debouncer' (7#1) [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/new/debouncer.vhd:16]
+INFO: [Synth 8-3491] module 'displays' declared at 'C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/Desktop/displays.vhd:7' bound to instance 'disp' of component 'displays' [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/new/modulo.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'displays' [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/Desktop/displays.vhd:20]
+INFO: [Synth 8-3491] module 'conv_7seg' declared at 'C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/Desktop/conv_7seg.vhd:4' bound to instance 'conv_7seg_digito_0' of component 'conv_7seg' [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/Desktop/displays.vhd:36]
+INFO: [Synth 8-638] synthesizing module 'conv_7seg' [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/Desktop/conv_7seg.vhd:9]
+INFO: [Synth 8-256] done synthesizing module 'conv_7seg' (8#1) [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/Desktop/conv_7seg.vhd:9]
+INFO: [Synth 8-3491] module 'conv_7seg' declared at 'C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/Desktop/conv_7seg.vhd:4' bound to instance 'conv_7seg_digito_1' of component 'conv_7seg' [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/Desktop/displays.vhd:37]
+INFO: [Synth 8-3491] module 'conv_7seg' declared at 'C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/Desktop/conv_7seg.vhd:4' bound to instance 'conv_7seg_digito_2' of component 'conv_7seg' [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/Desktop/displays.vhd:38]
+INFO: [Synth 8-3491] module 'conv_7seg' declared at 'C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/Desktop/conv_7seg.vhd:4' bound to instance 'conv_7seg_digito_3' of component 'conv_7seg' [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/Desktop/displays.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'displays' (9#1) [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/Desktop/displays.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'modulo' (10#1) [C:/Users/llama/Desktop/Mates-Infor/Tercero/TOC/Práctica 4/En clase/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/new/modulo.vhd:19]

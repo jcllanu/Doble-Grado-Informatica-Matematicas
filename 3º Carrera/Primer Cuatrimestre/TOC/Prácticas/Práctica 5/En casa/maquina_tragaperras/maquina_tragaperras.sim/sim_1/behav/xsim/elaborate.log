@@ -1,0 +1,35 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado19/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 11ea0339fd77418293223ae7246d99eb --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_3 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_tragaperras_behav xil_defaultlib.tb_tragaperras xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling architecture behavioral of entity xil_defaultlib.divisor [divisor_default]
+Compiling module blk_mem_gen_v8_4_3.blk_mem_gen_v8_4_3_output_stage(...
+Compiling module blk_mem_gen_v8_4_3.blk_mem_gen_v8_4_3_output_stage(...
+Compiling module blk_mem_gen_v8_4_3.blk_mem_gen_v8_4_3_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_3.blk_mem_gen_v8_4_3_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_3.blk_mem_gen_v8_4_3(C_FAMILY="art...
+Compiling module xil_defaultlib.memoria1
+Compiling module blk_mem_gen_v8_4_3.blk_mem_gen_v8_4_3_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_3.blk_mem_gen_v8_4_3(C_FAMILY="art...
+Compiling module xil_defaultlib.memoria2
+Compiling architecture rtl of entity xil_defaultlib.cd [cd_default]
+Compiling architecture rtl of entity xil_defaultlib.uc [uc_default]
+Compiling architecture rtl of entity xil_defaultlib.debouncer [debouncer_default]
+Compiling architecture behavioral of entity xil_defaultlib.conv_7seg [conv_7seg_default]
+Compiling architecture behavioral of entity xil_defaultlib.displays [displays_default]
+Compiling architecture estructura of entity xil_defaultlib.tragaperras [tragaperras_default]
+Compiling architecture rtl of entity xil_defaultlib.tb_tragaperras
+Built simulation snapshot tb_tragaperras_behav

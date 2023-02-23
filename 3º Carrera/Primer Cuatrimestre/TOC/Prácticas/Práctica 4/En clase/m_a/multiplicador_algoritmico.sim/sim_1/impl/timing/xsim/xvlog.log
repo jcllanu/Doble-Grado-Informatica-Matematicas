@@ -1,0 +1,9 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/ProyectosVivaldo/multiplicador_algoritmico/multiplicador_algoritmico.sim/sim_1/impl/timing/xsim/test_multiplicador_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cd
+INFO: [VRFC 10-311] analyzing module debouncer
+INFO: [VRFC 10-311] analyzing module displays
+INFO: [VRFC 10-311] analyzing module modulo
+INFO: [VRFC 10-311] analyzing module multiplicador
+INFO: [VRFC 10-311] analyzing module mux_8bits_2op
+INFO: [VRFC 10-311] analyzing module uc
+INFO: [VRFC 10-311] analyzing module glbl

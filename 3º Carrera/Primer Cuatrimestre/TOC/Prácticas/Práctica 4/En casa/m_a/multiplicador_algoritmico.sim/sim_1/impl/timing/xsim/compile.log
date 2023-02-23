@@ -1,0 +1,17 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/ProyectosVivaldo/multiplicador_algoritmico/multiplicador_algoritmico.sim/sim_1/impl/timing/xsim/test_multiplicador_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cd
+INFO: [VRFC 10-311] analyzing module debouncer
+INFO: [VRFC 10-311] analyzing module displays
+INFO: [VRFC 10-311] analyzing module modulo
+INFO: [VRFC 10-311] analyzing module multiplicador
+INFO: [VRFC 10-311] analyzing module mux_8bits_2op
+INFO: [VRFC 10-311] analyzing module uc
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/ProyectosVivaldo/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/Desktop/cd.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'cd'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/ProyectosVivaldo/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/new/multiplicador.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'multiplicador'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/ProyectosVivaldo/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/new/mux_8bits_2op.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux_8bits_2op'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/ProyectosVivaldo/multiplicador_algoritmico/multiplicador_algoritmico.srcs/sources_1/imports/Desktop/uc.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'uc'

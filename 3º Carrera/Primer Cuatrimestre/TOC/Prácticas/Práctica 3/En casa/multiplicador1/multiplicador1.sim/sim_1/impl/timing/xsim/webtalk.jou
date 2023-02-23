@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Nov 22 12:08:49 2020
+# Process ID: 3136
+# Current directory: C:/ProyectosVivaldo/multiplicador1/multiplicador1.sim/sim_1/impl/timing/xsim
+# Command line: wbtcv.exe -mode batch -source C:/ProyectosVivaldo/multiplicador1/multiplicador1.sim/sim_1/impl/timing/xsim/xsim.dir/tb_mult8_time_impl/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/ProyectosVivaldo/multiplicador1/multiplicador1.sim/sim_1/impl/timing/xsim/webtalk.log
+# Journal file: C:/ProyectosVivaldo/multiplicador1/multiplicador1.sim/sim_1/impl/timing/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/ProyectosVivaldo/multiplicador1/multiplicador1.sim/sim_1/impl/timing/xsim/xsim.dir/tb_mult8_time_impl/webtalk/xsim_webtalk.tcl -notrace
