@@ -1,0 +1,68 @@
+/abolish
+
+create table programadores(dni string primary key, nombre string, dirección string, teléfono string);
+create table analistas(dni string primary key, nombre string, dirección string, teléfono string);
+create table distribución(códigopr string, dniemp string, horas int, primary key (códigopr, dniemp));
+create table proyectos(código string primary key, descripción string, dnidir string);
+
+insert into programadores(dni, nombre, dirección, teléfono) values('1','Jacinto','Jazmín 4','91-8888888');
+insert into programadores(dni, nombre, dirección, teléfono) values('2','Herminia','Rosa 4','91-7777777');
+insert into programadores(dni, nombre, dirección, teléfono) values('3','Calixto','Clavel 3','91-1231231');
+insert into programadores(dni, nombre, dirección, teléfono) values('4','Teodora','Petunia 3','91-6666666');
+
+insert into analistas(dni, nombre, dirección, teléfono) values('4','Teodora','Petunia 3','91-6666666');
+insert into analistas(dni, nombre, dirección, teléfono) values('5','Evaristo','Luna 1','91-1111111');
+insert into analistas(dni, nombre, dirección, teléfono) values('6','Luciana','Júpiter 2','91-8888888');
+insert into analistas(dni, nombre, dirección, teléfono) values('7','Nicodemo','Plutón 3',NULL);
+
+insert into distribución(códigopr, dniemp, horas) values('P1','1',10);
+insert into distribución(códigopr, dniemp, horas) values('P1','2',40);
+insert into distribución(códigopr, dniemp, horas) values('P1','4',5);
+-- Se ha añadido la siguiente tupla para este acertijo (así aparece un empleado con 3 proyectos)
+insert into distribución(códigopr, dniemp, horas) values('P1','5',3); 
+insert into distribución(códigopr, dniemp, horas) values('P2','4',10);
+insert into distribución(códigopr, dniemp, horas) values('P3','1',10);
+insert into distribución(códigopr, dniemp, horas) values('P3','3',40);
+insert into distribución(códigopr, dniemp, horas) values('P3','4',5);
+insert into distribución(códigopr, dniemp, horas) values('P3','5',30);
+insert into distribución(códigopr, dniemp, horas) values('P4','4',20);
+insert into distribución(códigopr, dniemp, horas) values('P4','5',10);
+
+insert into proyectos(código, descripción, dnidir) values('P1','Nómina','4');
+insert into proyectos(código, descripción, dnidir) values('P2','Contabilidad','4');
+insert into proyectos(código, descripción, dnidir) values('P3','Producción','5');
+insert into proyectos(código, descripción, dnidir) values('P4','Clientes','5');
+insert into proyectos(código, descripción, dnidir) values('P5','Ventas','6');
+
+--JUA CARLOS LLAMAS NÚÑEZ   GRUPO 3ºDG
+
+--Definición auxiliar de empleados
+empleados:=programadores union analistas;
+
+
+--La estrategia va a ser elegir en cada "vuelta del bucle", y para cada empleado, el nombre del proyecto mínimo (considerando el orden lexicográfico, es decir, el primero por órden alfabético) dentro de los "restantes" por asignar. Una vez elegidos (a lo sumo uno por cada empleado) se borran de los "restantes" y se repite el proceso. Al final del proceso tendremos n relaciones (una por cada vuelta del bucle) y cada relación está compuesta por dos columnas: el dni del empleado y el mínimo de los "restantes" en el paso i. Tras esto, solo falta yuxtaponer las columnas dni, minimo_1, minimo_2, minimo_3, ... ,minimo_n mediante la unión externa. Se verifica que para una tupla dada, la primera componente es el dni, la segundo es el proyecto con nombre mínimo por orden alfabético (existe tal proyecto porque el dni estaba en la relación de distribución) y los siguientes n-1 elementos serán r nombres de proyectos ordenados alfabéticamente y n-r-1 "null" ya que la yuxtaposición la hacemos mediante la reunión externa (nljoin).
+
+--En primer lugar los proyectos restantes son todos aquellos que aparecen en la relación de distribución
+restantes0:=project dniemp, descripción (distribución zjoin código=códigopr proyectos);
+--Agrupamos por dni y para cada dni elegimos el mínimo de los proyectos asignados a dicho dni considerando el orden alfabético. Ya tenemos nuestra primera fila de minimos.
+minimos1(dni,p1):= group_by dniemp dniemp,min(descripción) true (restantes0);
+
+--Actualizamos los proyectos restantes quitando los que aparecen en minimo1. 
+restantes1:=restantes0 difference minimos1;
+--A partir de ahora no podemos garantizar que a todos los empleados les quede algún proyecto en "restantes", por lo que puede que las siguientes relaciones de minimo_i tengan menos de m tuplas siendo m el número de empleados con algun proyecto.
+minimos2(dni,p2):=group_by dniemp dniemp,min(descripción) true (restantes1);
+
+--Repetimos el bucle...
+restantes2:=restantes1 difference minimos2;
+minimos3(dni,p3):=group_by dniemp dniemp,min(descripción) true (restantes2);
+restantes3:=restantes2 difference minimos3;
+minimos4(dni,p4):=group_by dniemp dniemp,min(descripción) true (restantes3);
+
+--Una vez terminamos el "bucle" (en nuestro caso n=4) procedemos a juntar las columnas con la reunión externa. El resultado van a ser m tuplas por que todos los empleados que aparecían en la tabla de distribución tenían asignados al menos un proyecto y la diferencia del número de proyectos que tenían asignados hasta n será el número de nulls que tendrán en las componentes del final
+solucion(dni,p1,p2,p3,p4):= (((minimos1 nljoin minimos2) nljoin minimos3)nljoin minimos4);
+--Por último hacemos corresponder a cada dni el nombre de dicho empleado para la representacion final
+resultado:= project solucion.dni,nombre,p1,p2,p3,p4 (solucion zjoin solucion.dni=empleados.dni empleados);
+
+select true (resultado);
+
+

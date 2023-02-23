@@ -1,0 +1,153 @@
+/abolish
+/multiline on
+--JUAN CARLOS LLAMAS NÚÑEZ GRUPO DG
+-- Para procesar este archivo (se puede especificar también la ruta): /process datos.ra
+-- Antes debéis crear las relaciones (tablas). DONE
+-- Falta la última tupla de cada tabla y debéis escribir vosotros la instrucción de inserción en cada caso DONE
+
+--creacion de tablas de programadores y analistas
+create table programadores(dni string primary key, nombre string,
+dirección string, teléfono string);
+create table analistas(dni string primary key, nombre string,
+dirección string, teléfono string);
+
+
+
+insert into programadores(dni, nombre, dirección, teléfono) values('1','Jacinto','Jazmín 4','91-8888888');
+insert into programadores(dni, nombre, dirección, teléfono) values('2','Herminia','Rosa 4','91-7777777');
+insert into programadores(dni, nombre, dirección, teléfono) values('3','Calixto','Clavel 3','91-1231231');
+--Última tupla de programadores
+insert into programadores(dni, nombre, dirección, teléfono) values('4','Teodora','Petunia 3','91-6666666');
+
+
+insert into analistas(dni, nombre, dirección, teléfono) values('4','Teodora','Petunia 3','91-6666666');
+insert into analistas(dni, nombre, dirección, teléfono) values('5','Evaristo','Luna 1','91-1111111');
+insert into analistas(dni, nombre, dirección, teléfono) values('6','Luciana','Júpiter 2','91-8888888');
+--Última tupla de analistas
+insert into analistas(dni, nombre, dirección, teléfono) values('7','Nicodemo','Plutón 3',NULL);
+
+-- Para crear una clave primaria de más de un atributo hay que añadir al final como si fuese otro campo lo siguiente: primary key (códigopr, dniemp)
+
+--creacion de tablas de distribución y proyectos
+create table distribución(códigopr string, dniemp string, horas int,primary key (códigopr, dniemp));
+create table proyectos(código string primary key, descripción string, dnidir string);
+
+insert into distribución(códigopr, dniemp, horas) values('P1','1',10);
+insert into distribución(códigopr, dniemp, horas) values('P1','2',40);
+insert into distribución(códigopr, dniemp, horas) values('P1','4',5);
+insert into distribución(códigopr, dniemp, horas) values('P2','4',10);
+insert into distribución(códigopr, dniemp, horas) values('P3','1',10);
+insert into distribución(códigopr, dniemp, horas) values('P3','3',40);
+insert into distribución(códigopr, dniemp, horas) values('P3','4',5);
+insert into distribución(códigopr, dniemp, horas) values('P3','5',30);
+insert into distribución(códigopr, dniemp, horas) values('P4','4',20);
+--Última tupla de distribución
+insert into distribución(códigopr, dniemp, horas) values('P4','5',10);
+
+insert into proyectos(código, descripción, dnidir) values('P1','Nómina','4');
+insert into proyectos(código, descripción, dnidir) values('P2','Contabilidad','4');
+insert into proyectos(código, descripción, dnidir) values('P3','Producción','5');
+insert into proyectos(código, descripción, dnidir) values('P4','Clientes','5');
+--Última tupla de proyectos
+insert into proyectos(código, descripción, dnidir) values('P5','Ventas','6');
+
+
+empleados:=analistas union programadores;
+
+--VISTA 1
+
+vista1(dni):= project dni (programadores njoin analistas);
+
+--VISTA 2
+
+EmpleadosConProyecto:= group_by dniemp dniemp, sum(horas) true (distribución);
+DNIEmpleadosSinProyecto:= (project dni (empleados)) difference (project dniemp (EmpleadosConProyecto));
+vista2(dni,horas):= EmpleadosConProyecto union (DNIEmpleadosSinProyecto product project 0 (dual));
+
+--VISTA 3
+
+vista3:= project dni, nombre, proyecto (empleados nljoin rename d(proyecto,dni,horas) (distribución));
+
+--VISTA 4
+
+vista4:= project dni, nombre (select teléfono is null (empleados));
+
+--VISTA 5
+
+--Asignamos a cada empleado que está trabajando el cociente entre el número de horas que trabaja y los proyectos en los que trabaja
+HorasXProyectoEmpleados(dni,horasxproyecto):= group_by dniemp dniemp, sum(horas)/count(dniemp) true (distribución);
+
+--Asignamos a cada proyecto que tiene gente trabajando el cociente entre el número de horas y los trabajadores que participan
+HorasxEmpleadoProyecto(proy, horasxEmpleado):= group_by códigopr códigopr,sum(horas)/count(códigopr)  true (distribución);
+
+--Calculamos la media de el número de horas entre los trabajadores 
+media(m):= group_by [] avg(horasxEmpleado) true (HorasxEmpleadoProyecto);
+
+--Seleccionamos los trabajadores con horas/proyecto menor que 'media'
+vista5(dni,número):= project dni, horasxproyecto (select horasxproyecto<m (HorasXProyectoEmpleados product media));
+
+
+--VISTA 6
+
+--Al DNI de cada empleado que trabaja le asignamos el nombre y un proyecto en el que trabaja
+EmpleadosConProyectos:=project dni, nombre,códigopr (empleados zjoin dni=dniemp distribución);
+
+--Cada tupla contiene dos empleados que trabajan en un mismo proyecto
+EmpleadosMismoProyecto:=EmpleadosConProyectos zjoin códigopr=c rename a1(dni2,nombre2,c)(EmpleadosConProyectos);
+
+--Nos quedamos con el DNI de los que trabajan con Evaristo
+trabajanConEvaristo:=project dni(select nombre='Evaristo' or nombre2='Evaristo' (EmpleadosMismoProyecto));
+
+--Los que no trabajan con Evaristo son todos los que trabajan menos los que trabajan con él
+noTrabajanConEvaristo:= project dniemp(distribución) difference trabajanConEvaristo;
+
+vista6(dni,códigopr,horas):=project dniemp,códigopr,horas*1.2 (noTrabajanConEvaristo njoin distribución);
+
+--VISTA 7
+--Usamos 'EmpleadosConProyectos' de la resolución de la vista 6
+
+--Obtenemos los proyectos en los que participa Evaristo
+proyectosEvaristo:= project códigopr (select nombre='Evaristo' (EmpleadosConProyectos));
+
+--Aplicamos la division y quitamos a Evaristo
+vista7:= project dni(select nombre!='Evaristo'(EmpleadosConProyectos division proyectosEvaristo));
+
+--VISTA 8
+--Usamos 'EmpleadosConProyectos' y 'proyectosEvaristo' de la resolución de las vistas 6 y 7
+
+--Coleccionamos los empleados que participan en algún proyecto de Evaristo
+EmpleadosConProyectosEvaristo:=EmpleadosConProyectos njoin proyectosEvaristo;
+
+--A cada uno de los anteriores le asignamos el número de proyectos en los que trabaja junto con Evaristo (multiplicidad)
+EmpleadosConProyectosEvaristoBIS(dni,nombre,multiplicidad):=group_by dni,nombre dni, nombre, count(dni) true (EmpleadosConProyectosEvaristo);
+
+--Annadimos a la tabla una columna con el número de proyectos en los que trabaja Evaristo y comparamos multiplicidad con este número.
+--Si ambos números son iguales entonces dicho empleado trabaja en al menos los mismos proyectos que Evaristo.
+--Por último eliminamos a Evaristo
+vista8:=project dni(select multiplicidad = multipliciadEvaristo and nombre !='Evaristo' (EmpleadosConProyectosEvaristoBIS product rename pE(multipliciadEvaristo)(project count(códigopr)(proyectosEvaristo))));
+
+
+--VISTA 9
+
+--Vista con el dni de cada empleado y su jefe
+EmpleadosJefes := project dniemp, dnidir (proyectos zjoin código=códigopr distribución);
+--Calculamos recursivamente todos los posibles jefes de un empleado
+jefe(dniemp,dnidir) := project dniemp,dnidir (EmpleadosJefes) union project e1,j2(rename j1(e1,j1) (EmpleadosJefes) zjoin j1=e2 rename j2(e2,j2) (jefe));
+
+--Asociamos a cada dni su nombre tanto para empleados como para jefes
+EmpleadosJefesNombre(dniemp,dnidir,nombreJefe):=project dniemp,dnidir,nombre(jefe zjoin dnidir=dni empleados);
+EmpleadosJefesNombres(dniemp,dnidir,nombreJefe,nombreEmp):= project dniemp,dnidir,nombreJefe,nombre(EmpleadosJefesNombre zjoin dniemp=dni empleados);
+
+--Seleccionamos los DNIs de los trabajadores que tengan como jefe Evaristo y que no sean el propio Evaristo
+vista9(dni):= project dniemp (select nombreJefe='Evaristo' and nombreEmp!='Evaristo'(EmpleadosJefesNombres));
+
+
+select true (vista1);
+select true (vista2);
+select true (vista3);
+select true (vista4);
+select true (vista5);
+select true (vista6);
+select true (vista7);
+select true (vista8);
+select true (vista9);

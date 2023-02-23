@@ -1,0 +1,88 @@
+/abolish
+--JUAN CARLOS LLAMAS NÚÑEZ GRUPO DG
+-- Para procesar este archivo (se puede especificar también la ruta): /process datos.ra
+-- Antes debéis crear las relaciones (tablas). DONE
+-- Falta la última tupla de cada tabla y debéis escribir vosotros la instrucción de inserción en cada caso DONE
+
+--creacion de tablas de programadores y analistas
+create table programadores(dni string primary key, nombre string,
+dirección string, teléfono string);
+create table analistas(dni string primary key, nombre string,
+dirección string, teléfono string);
+
+
+
+insert into programadores(dni, nombre, dirección, teléfono) values('1','Jacinto','Jazmín 4','91-8888888');
+insert into programadores(dni, nombre, dirección, teléfono) values('2','Herminia','Rosa 4','91-7777777');
+insert into programadores(dni, nombre, dirección, teléfono) values('3','Calixto','Clavel 3','91-1231231');
+--Última tupla de programadores
+insert into programadores(dni, nombre, dirección, teléfono) values('4','Teodora','Petunia 3','91-6666666');
+
+
+insert into analistas(dni, nombre, dirección, teléfono) values('4','Teodora','Petunia 3','91-6666666');
+insert into analistas(dni, nombre, dirección, teléfono) values('5','Evaristo','Luna 1','91-1111111');
+insert into analistas(dni, nombre, dirección, teléfono) values('6','Luciana','Júpiter 2','91-8888888');
+--Última tupla de analistas
+insert into analistas(dni, nombre, dirección, teléfono) values('7','Nicodemo','Plutón 3',NULL);
+
+-- Para crear una clave primaria de más de un atributo hay que añadir al final como si fuese otro campo lo siguiente: primary key (códigopr, dniemp)
+
+--creacion de tablas de distribución y proyectos
+create table distribución(códigopr string, dniemp string, horas int,primary key (códigopr, dniemp));
+create table proyectos(código string primary key, descripción string, dnidir string);
+
+insert into distribución(códigopr, dniemp, horas) values('P1','1',10);
+insert into distribución(códigopr, dniemp, horas) values('P1','2',40);
+insert into distribución(códigopr, dniemp, horas) values('P1','4',5);
+insert into distribución(códigopr, dniemp, horas) values('P2','4',10);
+insert into distribución(códigopr, dniemp, horas) values('P3','1',10);
+insert into distribución(códigopr, dniemp, horas) values('P3','3',40);
+insert into distribución(códigopr, dniemp, horas) values('P3','4',5);
+insert into distribución(códigopr, dniemp, horas) values('P3','5',30);
+insert into distribución(códigopr, dniemp, horas) values('P4','4',20);
+--Última tupla de distribución
+insert into distribución(códigopr, dniemp, horas) values('P4','5',10);
+
+insert into proyectos(código, descripción, dnidir) values('P1','Nómina','4');
+insert into proyectos(código, descripción, dnidir) values('P2','Contabilidad','4');
+insert into proyectos(código, descripción, dnidir) values('P3','Producción','5');
+insert into proyectos(código, descripción, dnidir) values('P4','Clientes','5');
+--Última tupla de proyectos
+insert into proyectos(código, descripción, dnidir) values('P5','Ventas','6');
+
+
+empleados:=analistas union programadores;
+
+--Vista 1
+vista1:=project dni(empleados);
+
+--Vista 2
+vista2:=project dni(analistas intersect programadores);
+
+--Vista 3
+empleadosEnProyecto:=project dni, nombre, dirección, teléfono (select dni=dniemp (empleados product distribución));
+empleadosEnDireccion:=project dni, nombre, dirección, teléfono (select dni=dnidir (empleados product proyectos));
+empleadosTrabajando:=empleadosEnProyecto union empleadosEnDireccion;
+vista3:=project dni(empleados difference empleadosTrabajando);
+
+--Vista 4
+CódigosConAnalistas:=project códigopr(select dniemp=dni(distribución product analistas));
+vista4:=(project código (proyectos)) difference CódigosConAnalistas;
+
+--Vista 5
+vista5:=project dni (select dni=dnidir (proyectos product (analistas difference programadores)));
+
+--Vista 6
+vista6:=project descripción, nombre, horas (select dni=dniemp and código=códigopr (distribución product programadores product proyectos));
+
+--Vista 7
+vista7:=project teléfono (select teléfono=t1 and dni!=dni1(empleados product rename empleados1(dni1,n1,d1,t1) (empleados)));
+
+select true (vista1);
+select true (vista2);
+select true (vista3);
+select true (vista4);
+select true (vista5);
+select true (vista6);
+select true (vista7);
+

@@ -1,0 +1,72 @@
+/abolish
+/type_casting on
+
+create table patrones(id_patron string primary key, nombre string, titulo string, edad integer);
+insert into patrones(id_patron, nombre, titulo, edad) values('1','Jacinto','CY',45);
+insert into patrones(id_patron, nombre, titulo, edad) values('2','Herminia','PY',35);
+insert into patrones(id_patron, nombre, titulo, edad) values('3','Calixto','PER',22);
+insert into patrones(id_patron, nombre, titulo, edad) values('4','Teodora','PER',29);
+insert into patrones(id_patron, nombre, titulo, edad) values('5','Vicente','PNB',29);
+
+create table barcos(id_barco string primary key, nombre_barco string, color string);
+insert into barcos(id_barco, nombre_barco, color) values('1','Albatros','blanco');
+insert into barcos(id_barco, nombre_barco, color) values('2','Bravo','blanco');
+insert into barcos(id_barco, nombre_barco, color) values('3','Coral','rojo');
+insert into barcos(id_barco, nombre_barco, color) values('4','Dorada','blanco');
+insert into barcos(id_barco, nombre_barco, color) values('5','Exodus','azul');
+
+create table reservas(id_patron string references patrones, id_barco string references barcos, fecha date, primary key (id_patron, id_barco, fecha));
+insert into reservas(id_patron, id_barco, fecha) values('1','1','2014-06-01');
+insert into reservas(id_patron, id_barco, fecha) values('1','2','2014-06-07');
+insert into reservas(id_patron, id_barco, fecha) values('1','4','2014-08-12');
+insert into reservas(id_patron, id_barco, fecha) values('2','4','2014-07-20');
+insert into reservas(id_patron, id_barco, fecha) values('3','1','2014-08-05');
+insert into reservas(id_patron, id_barco, fecha) values('3','3','2014-09-16');
+insert into reservas(id_patron, id_barco, fecha) values('3','1','2014-06-11');
+insert into reservas(id_patron, id_barco, fecha) values('3','5','2014-07-13');
+insert into reservas(id_patron, id_barco, fecha) values('4','4','2014-08-22');
+insert into reservas(id_patron, id_barco, fecha) values('4','5','2014-09-03');
+
+--JUAN CARLOS LLAMAS NÚÑEZ    3ºDG
+
+--Calculamos los barcos que tienen al menos 2 fechas de reserva distintas
+barcosAlMenos2reservas:= project id_barco,fecha,fecha1(reservas zjoin fecha!=fecha1 and id_barco=id_barco1 rename r(id_patron1,id_barco1,fecha1)(reservas));
+
+--Calculamos los barcos que tienen exactamente 3 fechas de reserva distintas
+barcos3reservas:=project id_barco (barcosAlMenos2reservas zjoin fecha!=fecha2 and fecha1!=fecha2 and id_barco=id_barco2 rename r(id_patron2,id_barco2,fecha2)(reservas));
+
+--A partir de las relaciones anteriores calulamos los barcos que tienen exactamente 2 reservas distintas
+barcos2reservas:= project id_barco(barcosAlMenos2reservas) difference barcos3reservas;
+
+--A partir de las relaciones anteriores calulamos los barcos que tienen exactamente 1 reserva
+barcos1reserva:= project id_barco (reservas) difference (barcos2reservas union barcos3reservas);
+
+--Haciendo uso de la tabla de reservas calulamos los barcos que no tienen ninguna reserva
+barcos0reservas:= project id_barco (barcos) difference (barcos1reserva union barcos2reservas union barcos3reservas);
+
+--Sabiendo el número exacto de reservas que tiene cada barco aignamos a cada barco dicho número de reservas y unimos las 4 vistas
+barcos3(id_barco, reservas) := barcos3reservas product project 3 (dual);
+barcos2(id_barco, reservas) := barcos2reservas product project 2 (dual);
+barcos1(id_barco, reservas) := barcos1reserva product project 1 (dual);
+barcos0(id_barco, reservas) := barcos0reservas product project 0 (dual);
+barcosReservas := barcos0 union barcos1 union barcos2 union barcos3;
+
+--Ahora basta calcular las tuplas con el máximo del número de reservas. A partir de aqui todo es analogo a la solucion del acertijo minimo
+
+--Relacion del numero de reservas que son menores que alguna otro numero de reservas con el id del barco
+MenoresQueAlgunNReserva:=project id_barco, reservas(select reservas<reservas1 (barcosReservas product rename b(id_barco1, reservas1)(barcosReservas)));
+
+--De entre todos los numeros de resrvas, el máximo es aquel que no es menor que alguno de las demas numeros de reservas, es decir, que es mayor o igual que todos ellos.
+
+solucion:=barcosReservas difference MenoresQueAlgunNReserva;
+
+--Para dar la solucion en forma del nombre del barco recurimos a la tabla de barcos
+vista1:= project nombre_barco(barcos zjoin solucion.id_barco=barcos.id_barco solucion);
+
+select true (vista1);
+  
+  
+  
+  
+  
+  

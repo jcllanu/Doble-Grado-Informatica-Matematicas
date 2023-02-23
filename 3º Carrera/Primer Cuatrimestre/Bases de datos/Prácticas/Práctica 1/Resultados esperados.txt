@@ -1,0 +1,71 @@
+
+DES> select true (vista1);
+
+answer(vista1.dni:string) ->
+{
+  answer('1'),
+  answer('2'),
+  answer('3'),
+  answer('4'),
+  answer('5'),
+  answer('6'),
+  answer('7')
+}
+Info: 7 tuples computed.          
+
+DES> select true (vista2);
+
+answer(vista2.dni:string) ->
+{
+  answer('4')
+}
+Info: 1 tuple computed.          
+
+DES> select true (vista3);
+
+answer(vista3.dni:string) ->
+{
+  answer('7')
+}
+Info: 1 tuple computed.          
+
+DES> select true (vista4);
+
+answer(vista4.c�digo:string) ->
+{
+  answer('P5')
+}
+Info: 1 tuple computed.          
+
+DES> select true (vista5);
+
+answer(vista5.dni:string) ->
+{
+  answer('5'),
+  answer('6')
+}
+Info: 2 tuples computed.          
+
+DES> select true (vista6);
+
+answer(vista6.descripci�n:string,vista6.nombre:string,vista6.horas:int) ->
+{
+  answer('Clientes','Teodora',20),
+  answer('Contabilidad','Teodora',10),
+  answer('N�mina','Herminia',40),
+  answer('N�mina','Jacinto',10),
+  answer('N�mina','Teodora',5),
+  answer('Producci�n','Calixto',40),
+  answer('Producci�n','Jacinto',10),
+  answer('Producci�n','Teodora',5)
+}
+Info: 8 tuples computed.          
+
+DES> select true (vista7);
+
+answer(vista7.tel�fono:string) ->
+{
+  answer('91-8888888')
+}
+Info: 1 tuple computed.          
+

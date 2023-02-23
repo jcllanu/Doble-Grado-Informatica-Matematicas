@@ -1,0 +1,5 @@
+﻿  simplex.cpp
+c:\users\llama\desktop\mates-infor\tercero\investigación operativa\simplex\project2\project2\fraccion.h(95): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\llama\desktop\mates-infor\tercero\investigación operativa\simplex\project2\project2\fraccion.h(108): warning C4018: '<': no coinciden signed/unsigned
+c:\users\llama\desktop\mates-infor\tercero\investigación operativa\simplex\project2\project2\simplex.cpp(31): warning C4715: 'filaVariableBasica': no todas las rutas de acceso de control devuelven un valor
+  Project2.vcxproj -> C:\Users\llama\Desktop\Mates-Infor\Tercero\Investigación operativa\Simplex\Project2\Debug\Project2.exe

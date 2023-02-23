@@ -1,0 +1,130 @@
+/abolish
+/multiline on
+/duplicates on
+/type_casting off
+/datalog
+
+CREATE TABLE jugadores (
+  nick STRING PRIMARY KEY,
+  edad INTEGER CHECK (edad>0),
+  ciudad STRING);
+
+CREATE TABLE juegos (
+  nombre STRING PRIMARY KEY,
+  tipo STRING CHECK (tipo IN ('puzzle','estrategia','plataformas')),
+  niveles INTEGER CHECK (niveles BETWEEN 1 AND 10));
+
+CREATE TABLE partidas (
+  juego STRING REFERENCES juegos(nombre),
+  nick STRING REFERENCES jugadores(nick),
+  nivel INTEGER CHECK (nivel BETWEEN 1 AND 10),
+  superado STRING CHECK (superado IN ('S', 'N')),
+  tiempo NUMBER(8,1) CHECK (tiempo>0),
+  PRIMARY KEY (juego, nick, nivel));
+
+INSERT INTO jugadores(nick, edad, ciudad) VALUES ('Azan',  20, 'Madrid');
+INSERT INTO jugadores(nick, edad, ciudad) VALUES ('Basra', 18, 'Segovia');
+INSERT INTO jugadores(nick, edad, ciudad) VALUES ('Cruc',  23, 'Madrid');
+INSERT INTO jugadores(nick, edad, ciudad) VALUES ('Eos',   60, 'Sevilla');
+INSERT INTO jugadores(nick, edad, ciudad) VALUES ('Luz',   20, 'Oviedo');
+INSERT INTO jugadores(nick, edad, ciudad) VALUES ('Zorai', 10, 'Sevilla');
+
+INSERT INTO juegos (nombre, tipo, niveles) VALUES ('Tetris',      'puzzle',      10);
+INSERT INTO juegos (nombre, tipo, niveles) VALUES ('Bubble',      'puzzle',       8);
+INSERT INTO juegos (nombre, tipo, niveles) VALUES ('Candy Crush', 'puzzle',      10);
+INSERT INTO juegos (nombre, tipo, niveles) VALUES ('Mine',        'puzzle',       7);
+INSERT INTO juegos (nombre, tipo, niveles) VALUES ('The Room',    'puzzle',       5);
+INSERT INTO juegos (nombre, tipo, niveles) VALUES ('Lyne',        'puzzle',      10);
+INSERT INTO juegos (nombre, tipo, niveles) VALUES ('Anomaly',     'estrategia',   2);
+INSERT INTO juegos (nombre, tipo, niveles) VALUES ('Age',         'estrategia',  10);
+INSERT INTO juegos (nombre, tipo, niveles) VALUES ('Empire',      'estrategia',   6);
+INSERT INTO juegos (nombre, tipo, niveles) VALUES ('Oscura',      'plataformas',  4);
+INSERT INTO juegos (nombre, tipo, niveles) VALUES ('BadLand',     'plataformas',  4);
+INSERT INTO juegos (nombre, tipo, niveles) VALUES ('RayMan',      'plataformas', 10);
+
+INSERT INTO partidas(juego, nick, nivel, superado)         VALUES ('Bubble',  'Azan',  1, 'N');
+INSERT INTO partidas(juego, nick, nivel, superado, tiempo) VALUES ('Bubble',  'Basra', 1, 'S',  10.0);
+INSERT INTO partidas(juego, nick, nivel, superado, tiempo) VALUES ('Mine',    'Azan',  1, 'S',  15.0);
+INSERT INTO partidas(juego, nick, nivel, superado, tiempo) VALUES ('Mine',    'Basra', 1, 'S',  25.0);
+INSERT INTO partidas(juego, nick, nivel, superado)         VALUES ('Lyne',    'Cruc',  1, 'N');
+INSERT INTO partidas(juego, nick, nivel, superado, tiempo) VALUES ('Lyne',    'Eos',   1, 'S',  50.0);
+INSERT INTO partidas(juego, nick, nivel, superado, tiempo) VALUES ('RayMan',  'Zorai', 1, 'S',  30.0);
+INSERT INTO partidas(juego, nick, nivel, superado, tiempo) VALUES ('RayMan',  'Eos',   1, 'S',  30.0);
+INSERT INTO partidas(juego, nick, nivel, superado, tiempo) VALUES ('BadLand', 'Eos',   1, 'S',  30.0);
+INSERT INTO partidas(juego, nick, nivel, superado)         VALUES ('Age',     'Azan',  1, 'N');
+INSERT INTO partidas(juego, nick, nivel, superado, tiempo) VALUES ('Age',     'Basra', 1, 'S',  20.0);
+INSERT INTO partidas(juego, nick, nivel, superado, tiempo) VALUES ('BadLand', 'Eos',   2, 'S',  40.0);
+INSERT INTO partidas(juego, nick, nivel, superado, tiempo) VALUES ('BadLand', 'Eos',   3, 'S',  50.0);
+INSERT INTO partidas(juego, nick, nivel, superado, tiempo) VALUES ('BadLand', 'Eos',   4, 'S',  60.0);
+INSERT INTO partidas(juego, nick, nivel, superado, tiempo) VALUES ('BadLand', 'Azan',  1, 'S', 140.0);
+INSERT INTO partidas(juego, nick, nivel, superado, tiempo) VALUES ('BadLand', 'Azan',  2, 'S', 140.0);
+INSERT INTO partidas(juego, nick, nivel, superado, tiempo) VALUES ('BadLand', 'Azan',  3, 'S', 150.0);
+INSERT INTO partidas(juego, nick, nivel, superado, tiempo) VALUES ('BadLand', 'Azan',  4, 'S', 160.0);
+INSERT INTO partidas(juego, nick, nivel, superado, tiempo) VALUES ('Empire',  'Azan',  1, 'S',  60.0);
+INSERT INTO partidas(juego, nick, nivel, superado, tiempo) VALUES ('Empire',  'Azan',  2, 'S',  60.0);
+INSERT INTO partidas(juego, nick, nivel, superado, tiempo) VALUES ('Empire',  'Azan',  3, 'S',  60.0);
+INSERT INTO partidas(juego, nick, nivel, superado, tiempo) VALUES ('Empire',  'Azan',  4, 'S',  60.0);
+INSERT INTO partidas(juego, nick, nivel, superado, tiempo) VALUES ('Empire',  'Azan',  5, 'S',  60.0);
+INSERT INTO partidas(juego, nick, nivel, superado, tiempo) VALUES ('Empire',  'Azan',  6, 'S',  60.0);
+INSERT INTO partidas(juego, nick, nivel, superado)         VALUES ('Tetris',  'Azan',  1, 'N');
+INSERT INTO partidas(juego, nick, nivel, superado, tiempo) VALUES ('Tetris',  'Basra', 1, 'S',  10.0);
+INSERT INTO partidas(juego, nick, nivel, superado, tiempo) VALUES ('Tetris',  'Azan',  2, 'S',  15.0);
+INSERT INTO partidas(juego, nick, nivel, superado, tiempo) VALUES ('Tetris',  'Basra', 2, 'S',  25.0);
+INSERT INTO partidas(juego, nick, nivel, superado)         VALUES ('Tetris',  'Cruc',  1, 'N');
+INSERT INTO partidas(juego, nick, nivel, superado, tiempo) VALUES ('Tetris',  'Eos',   1, 'S',  50.0);
+INSERT INTO partidas(juego, nick, nivel, superado, tiempo) VALUES ('Tetris',  'Zorai', 1, 'S',  30.0);
+INSERT INTO partidas(juego, nick, nivel, superado, tiempo) VALUES ('Tetris',  'Eos',   2, 'S',  30.0);
+
+--JUAN CARLOS LLAMAS NÚÑEZ
+
+
+--VISTA 1
+niveles1Superados:= select superado='S' and nivel=1 (partidas zjoin juego= nombre juegos);
+v1:=group_by tipo tipo, max(tiempo) true (niveles1Superados);
+
+--VISTA 2
+JuegosConNivelMaxSuperado:= select superado='S' and nivel=niveles (partidas zjoin juego=nombre juegos);
+JuegosPorNumJug(juego,jugadores) :=group_by juego juego, count(juego) true(JuegosConNivelMaxSuperado);
+v2:= sort juego asc (JuegosPorNumJug);
+
+--VISTA 3
+
+numNivelesMedio(tipo, promedio):= group_by tipo tipo, avg(niveles) true (juegos);
+JuegosConNivelMedioTipo:= juegos njoin numNivelesMedio;
+v3(juego, niveles, promedio):= sort nombre asc (project nombre, niveles, promedio (JuegosConNivelMedioTipo));
+
+
+--VISTA 4
+jugadoresTetris:= distinct(project nick (select juego='Tetris'(partidas)));
+InfoJugTetris:= jugadoresTetris njoin jugadores;
+edadMax(edad):=group_by [] max(edad) true (InfoJugTetris);
+v4(nick,edad,ciudad):=project nick,edad,ciudad(InfoJugTetris njoin edadMax);
+
+--VISTA 5
+--Para cada jugador y juego le asignamos el nivel maximo que ha superado y el numero de partidas superadas (se supone que solo hay una partida por nivel superado por que el tiempo corresponde al minimo de los tiempos)
+d(nick,nombre,maximoNivel,nivelesSuperados):= group_by nick,juego nick,juego,max(nivel),count(nick) true(select superado='S'(partidas));
+--Si no coinciden, han hecho trampas
+e:= project nick,nombre, maximoNivel (select maximoNivel <> nivelesSuperados (d));
+--Fataba annadir la condicion de que se hubiera pasado el juego
+v5:= project  nick,e.nombre (e zjoin maximoNivel= niveles juegos);
+--VISTA 6
+juegosBasra(juego):= distinct(project juego(select nick='Basra' (partidas)));
+v6(nick):= sort nick (distinct(project nick, juego (partidas)) division juegosBasra);
+
+--VISTA 7
+numJuegos(num):= group_by [] count(nombre) true (juegos);
+nat(n,stop):= project 1 (dual) product numJuegos union project n+1, stop (select n<stop (nat));
+v7:= project n (nat); 
+
+
+
+
+select true (v1);
+select true (v2);
+select true (v3);
+select true (v4);
+select true (v5);
+select true (v6);
+select true (v7);
+
+

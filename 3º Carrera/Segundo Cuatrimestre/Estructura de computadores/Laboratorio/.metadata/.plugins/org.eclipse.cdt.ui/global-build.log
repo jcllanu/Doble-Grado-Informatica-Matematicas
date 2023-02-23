@@ -1,0 +1,120 @@
+21:13:01 **** Incremental Build of configuration Debug for project practica2 ****
+cs-make all 
+'Invoking: ARM Sourcery Windows GNU Print Size'
+arm-none-eabi-size  --format=berkeley practica2.elf
+   text	   data	    bss	    dec	    hex	filename
+   7624	    200	      4	   7828	   1e94	practica2.elf
+'Finished building: practica2.siz'
+' '
+21:13:15 **** Incremental Build of configuration Debug for project practica1 ****
+cs-make all 
+'Invoking: ARM Sourcery Windows GNU Print Size'
+arm-none-eabi-size  --format=berkeley practica1.elf
+   text	   data	    bss	    dec	    hex	filename
+   3996	    120	      8	   4124	   101c	practica1.elf
+'Finished building: practica1.siz'
+' '
+21:13:15 **** Incremental Build of configuration Debug for project practica2 ****
+cs-make all 
+'Invoking: ARM Sourcery Windows GNU Print Size'
+arm-none-eabi-size  --format=berkeley practica2.elf
+   text	   data	    bss	    dec	    hex	filename
+   7624	    200	      4	   7828	   1e94	practica2.elf
+'Finished building: practica2.siz'
+' '
+21:13:20 **** Incremental Build of configuration Debug for project practica2 ****
+cs-make all 
+'Invoking: ARM Sourcery Windows GNU Print Size'
+arm-none-eabi-size  --format=berkeley practica2.elf
+   text	   data	    bss	    dec	    hex	filename
+   7624	    200	      4	   7828	   1e94	practica2.elf
+'Finished building: practica2.siz'
+' '
+17:04:51 **** Incremental Build of configuration Debug for project practica1 ****
+cs-make all 
+'Invoking: ARM Sourcery Windows GNU Print Size'
+arm-none-eabi-size  --format=berkeley practica1.elf
+   text	   data	    bss	    dec	    hex	filename
+   3996	    120	      8	   4124	   101c	practica1.elf
+'Finished building: practica1.siz'
+' '
+17:04:53 **** Incremental Build of configuration Debug for project practica2 ****
+cs-make all 
+'Invoking: ARM Sourcery Windows GNU Print Size'
+arm-none-eabi-size  --format=berkeley practica2.elf
+   text	   data	    bss	    dec	    hex	filename
+   7624	    200	      4	   7828	   1e94	practica2.elf
+'Finished building: practica2.siz'
+' '
+17:05:21 **** Incremental Build of configuration Debug for project practica1 ****
+cs-make all 
+'Invoking: ARM Sourcery Windows GNU Print Size'
+arm-none-eabi-size  --format=berkeley practica1.elf
+   text	   data	    bss	    dec	    hex	filename
+   3996	    120	      8	   4124	   101c	practica1.elf
+'Finished building: practica1.siz'
+' '
+17:05:21 **** Incremental Build of configuration Debug for project practica2 ****
+cs-make all 
+'Invoking: ARM Sourcery Windows GNU Print Size'
+arm-none-eabi-size  --format=berkeley practica2.elf
+   text	   data	    bss	    dec	    hex	filename
+   7624	    200	      4	   7828	   1e94	practica2.elf
+'Finished building: practica2.siz'
+' '
+17:05:26 **** Incremental Build of configuration Debug for project practica2 ****
+cs-make all 
+'Invoking: ARM Sourcery Windows GNU Print Size'
+arm-none-eabi-size  --format=berkeley practica2.elf
+   text	   data	    bss	    dec	    hex	filename
+   7624	    200	      4	   7828	   1e94	practica2.elf
+'Finished building: practica2.siz'
+' '
+11:11:15 **** Incremental Build of configuration Debug for project practica1 ****
+cs-make all 
+'Invoking: ARM Sourcery Windows GNU Print Size'
+arm-none-eabi-size  --format=berkeley practica1.elf
+   text	   data	    bss	    dec	    hex	filename
+   3996	    120	      8	   4124	   101c	practica1.elf
+'Finished building: practica1.siz'
+' '
+11:11:16 **** Incremental Build of configuration Debug for project practica2 ****
+cs-make all 
+'Invoking: ARM Sourcery Windows GNU Print Size'
+arm-none-eabi-size  --format=berkeley practica2.elf
+   text	   data	    bss	    dec	    hex	filename
+   7624	    200	      4	   7828	   1e94	practica2.elf
+'Finished building: practica2.siz'
+' '
+11:11:24 **** Incremental Build of configuration Debug for project practica2 ****
+cs-make all 
+'Invoking: ARM Sourcery Windows GNU Print Size'
+arm-none-eabi-size  --format=berkeley practica2.elf
+   text	   data	    bss	    dec	    hex	filename
+   7624	    200	      4	   7828	   1e94	practica2.elf
+'Finished building: practica2.siz'
+' '
+12:19:12 **** Incremental Build of configuration Debug for project practica1 ****
+cs-make all 
+'Invoking: ARM Sourcery Windows GNU Print Size'
+arm-none-eabi-size  --format=berkeley practica1.elf
+   text	   data	    bss	    dec	    hex	filename
+   3996	    120	      8	   4124	   101c	practica1.elf
+'Finished building: practica1.siz'
+' '
+12:19:13 **** Incremental Build of configuration Debug for project practica2 ****
+cs-make all 
+'Invoking: ARM Sourcery Windows GNU Print Size'
+arm-none-eabi-size  --format=berkeley practica2.elf
+   text	   data	    bss	    dec	    hex	filename
+   7624	    200	      4	   7828	   1e94	practica2.elf
+'Finished building: practica2.siz'
+' '
+12:19:18 **** Incremental Build of configuration Debug for project practica2 ****
+cs-make all 
+'Invoking: ARM Sourcery Windows GNU Print Size'
+arm-none-eabi-size  --format=berkeley practica2.elf
+   text	   data	    bss	    dec	    hex	filename
+   7624	    200	      4	   7828	   1e94	practica2.elf
+'Finished building: practica2.siz'
+' '
