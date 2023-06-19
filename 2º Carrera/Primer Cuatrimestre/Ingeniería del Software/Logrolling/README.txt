@@ -1,0 +1,1 @@
+Documentación para el proyecto 'Logrolling' elaborado por Juan Carlos Llamas Núñez, Adrián Sanjuán Espejo, Alberto Almagro Sánchez, Jaime Martínez, Pablo Torre Piñana, Pedro Palacios Almendros, Rubén Gómez Blanco y Santiago Mourenza 

@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-
+//Conversor de segundos a horas, minutos y segundos
 int main()
 {
 	int segundos, minutos, horas, tiempo;

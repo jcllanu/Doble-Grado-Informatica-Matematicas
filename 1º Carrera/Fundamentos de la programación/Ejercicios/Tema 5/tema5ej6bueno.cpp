@@ -4,6 +4,7 @@
 #include<iomanip>
 using namespace std;
 
+//Calculadora coste de llamadas por clientes
 int const MaxC = 100;
 int const MaxL = 50;
 

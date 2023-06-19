@@ -4,6 +4,15 @@
 using namespace std;
 
 
+// Simulador 4 en línea
+// Tablero formado por siete columnas y seis filas 
+// Cada jugador coloca alternativamente una ficha en una columna comenzando a numerar en el cero, comenzando por las fichas amarillas.
+// La entrada consta de una serie de casos de prueba. Cada caso comienza con una linea en la que se
+// indica el numero total de fichas que se utilizan en la partida. En la linea siguiente se van indicando las
+// columnas elegidas por cada jugador. 
+// Para cada caso de prueba se escribe en una línea ''Gana A'' si ha ganado el jugador que comienza la
+// partida, ''Gana B'' si ha ganado el jugador con las fichas rojas y ''Empate'' si no ha ganado ninguno.
+
 const int MAX_FILAS = 6;
 const int MAX_COLUMNAS = 7;
 

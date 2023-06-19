@@ -1,0 +1,1 @@
+Entregas y trabajo de GEometría diferencial de curvas y superficies realizadas por Juan Carlos Llamas Núñez

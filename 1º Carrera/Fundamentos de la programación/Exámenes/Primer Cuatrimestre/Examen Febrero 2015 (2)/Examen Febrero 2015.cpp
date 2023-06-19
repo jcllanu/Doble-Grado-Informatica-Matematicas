@@ -5,6 +5,8 @@
 
 using namespace std;
 
+//Gestión de la elección de Asignaturas
+//Lectura y escritura de datos, visualizar información y operaciones de reserva
 
 int const NUM_ASIG = 6;
 int const MAX_RES = 4;

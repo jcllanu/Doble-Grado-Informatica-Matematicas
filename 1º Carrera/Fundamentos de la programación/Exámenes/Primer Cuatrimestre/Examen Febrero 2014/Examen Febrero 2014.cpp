@@ -10,6 +10,11 @@ int const NP = 5;
 string const Lectura = "proveedores.txt";
 string const Escritura = "proveedores1.txt";
 
+//Gestión de proovedores en una empresa y operaciones sobre ellos.
+//Lectura y escritura de datos 
+//"1.- Nuevo pedido"
+//"2.- Proveedores con número de pedidos en un intervalo"
+//"3.- Gastos por clase de proveedor "
 
 typedef struct {
 	string nif;

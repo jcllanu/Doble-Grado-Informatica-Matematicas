@@ -23,7 +23,8 @@ void filtrarLista(const tListaJugadores& lista, string equipo);
 void actualizarJugador(tListaJugadores& lista, string jugador, int minutos, int goles);
 void consultarMaxGoleador(const tListaJugadores& lista);
 
-
+//Gestion de estadisticas de jugadores
+//cargar y leer datos, mostrar lista y actualizar información
 int main() {
 	system("chcp 1252");
 	tListaJugadores listaJugadores;

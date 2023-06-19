@@ -1,0 +1,1 @@
+Código del examen de la asignatura Fundamentos de Algoritmia (curso 2019/2020 convocatoria ordinaria) de Juan Carlos Llamas Núñez cuyo enunciado se puede encontrar en el drive del doble grado.

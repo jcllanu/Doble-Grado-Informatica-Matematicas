@@ -4,6 +4,8 @@
 
 using namespace std;
 
+//Ordenaciones
+
 typedef struct {
 	int num;
 	char car;

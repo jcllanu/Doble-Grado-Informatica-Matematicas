@@ -2,7 +2,7 @@
 using namespace std;
 
 
-
+//Área del triángulo dasdos dos lados y ángulo que forman
 int main()
 {
 	system("chcp 1252");

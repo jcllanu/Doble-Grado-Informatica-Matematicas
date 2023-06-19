@@ -1,6 +1,7 @@
 #include"ListaCitas.h"
 
 int menu();
+//Gestión de un programa de citas online
 
 int main() {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
@@ -10,9 +11,7 @@ int main() {
 	tListaClientes listaClientes;
 	tCita cita;
 	int op , pos;
-	
-	
-	
+		
 	if (cargar(listaClientes)) {
 		if (nuevaLista(listaCitas)) {
 			op = menu();

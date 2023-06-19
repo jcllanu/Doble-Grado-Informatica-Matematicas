@@ -1,0 +1,1 @@
+Ejercicios realizados durante la asignatura de Ingeniería del Software I (curso 2019/2020) por Juan Carlos Llamas Núñez

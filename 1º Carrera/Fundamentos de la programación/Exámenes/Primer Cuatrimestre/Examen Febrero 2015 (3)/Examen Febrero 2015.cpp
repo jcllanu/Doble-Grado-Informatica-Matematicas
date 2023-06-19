@@ -4,6 +4,8 @@
 #include<string>
 
 using namespace std;
+//catálogo de Viajes
+//lectura, escritura, vsualización y modificación de datos
 
 int const MAX_VIAJES = 7;
 int const NUM_PREFERENCIAS = 3;

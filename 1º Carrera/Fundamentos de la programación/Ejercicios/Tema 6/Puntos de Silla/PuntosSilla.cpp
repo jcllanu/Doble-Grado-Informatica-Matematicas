@@ -1,7 +1,11 @@
-// Nombre y apellidos
+// Juan Carlos Llamas Núñez
 // Solución al programa del juez de fp.fdi.ucm.es
-// "Máxima cota de un mapa topográfico"
-
+// "Puntos de silla"
+//	Existencia de puntos de silla en una matriz, es decir, 
+// elementos de la matriz que cumplen que son menores o iguales que el resto de elementos de su fila y mayores
+// o iguales que el resto de elementos de su columna, o al revés, mayores o iguales
+// que el resto de elementos de su fila y menores o iguales que el resto de elementos
+// de su columna
 #include <iostream>
 #include <fstream>
 #include<string>

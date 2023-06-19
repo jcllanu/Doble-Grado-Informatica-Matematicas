@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-
+//Par impar
 int main()
 {
 	int num = 1;

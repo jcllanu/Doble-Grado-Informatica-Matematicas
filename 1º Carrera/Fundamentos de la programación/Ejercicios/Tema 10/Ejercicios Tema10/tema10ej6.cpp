@@ -1,5 +1,8 @@
 #include<iostream>
 using namespace std;
+
+//Exponencial recursiva
+
 float potRec2(float x, int n);
 int main() {
 

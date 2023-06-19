@@ -1,0 +1,2 @@
+Examen práctico convocatoria ordinaria de asignatura Sistemas Operativos (curso 2021/2022) por Juan Carlos Llamas Núñez. 
+Realizado a partir de la práctica del simulador de autobuses y cuyo enunciado puede encontrarse en el drive del doble grado

@@ -1,0 +1,1 @@
+Trabajos elaborados por Juan Carlos Llamas Núñez, Pedro Palacios Almendros, Alberto Almagro Sánchez y Enrique Rey Gisbert

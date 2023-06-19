@@ -1,5 +1,6 @@
 #include"Cuadrilla.h"
 
+//Gesti´çon de plantación de plátanos y cuadrillas de trabajo
 int main() {
 	system("chcp 1252");
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);

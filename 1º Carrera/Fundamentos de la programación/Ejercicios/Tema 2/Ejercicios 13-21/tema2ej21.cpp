@@ -4,6 +4,20 @@
 #include <math.h>
 using namespace std;
 
+//Factura
+//Precio de un producto y las unidades 
+//carácter que indique si se tiene derecho a descuento del 15% antes del I.V.A. (S/N), 
+//Cadena  nombre completo (varias palabras) del cliente,
+//Cadena con el NIF del cliente,
+//Cadena dirección postal (varias palabras) 
+//Cadena nombre del producto. 
+// A continuación, el programa generará en la pantalla una factura de la compra 
+// realizada: nombre del cliente, dirección y NIF, nombre del producto, unidades 
+//adquiridas, precio unitario, total (unidades por precio), descuento aplicado, total 
+//tras descuento, tanto por ciento de I.V.A. aplicado (21% actualmente), cantidad 
+//de I.V.A. y precio final (añadiendo el I.V.A. al total). Cada dato irá en una línea, 
+//precedido de su nombre, y ocupará exactamente 10 espacios, estará ajustado a 
+//la derecha y mostrará 2 decimales.
 int main()
 {
 	system("chcp 1252");

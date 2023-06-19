@@ -5,6 +5,8 @@ using namespace std;
 const int Tam=100;
 typedef int tLista[Tam];
 
+//Fibonacci generalizado y operaciones sobre la secuencia generada 
+
 int nuevoNumero(const tLista lista, int ind1, int ind2);
 void generaArray(tLista lista, int n, int x);
 int pasar(const tLista lista, int n, int pasarse);

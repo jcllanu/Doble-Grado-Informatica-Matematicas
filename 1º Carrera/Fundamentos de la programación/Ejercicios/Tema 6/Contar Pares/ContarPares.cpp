@@ -4,7 +4,8 @@
 // Comentario general sobre la solución,
 // explicando cómo se resuelve el problema
 
-
+//Dado un vector de naturales v y un entero n (0<=n<=10.000 ) devolver el número de numeros pares
+//que hay el vector.
 
 #include <iostream>
 using namespace std;

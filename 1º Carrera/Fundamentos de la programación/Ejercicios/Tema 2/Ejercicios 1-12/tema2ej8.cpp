@@ -1,7 +1,13 @@
 #include <iostream>
 using namespace std;
 
-
+//Nomina
+// El total a ingresar es igual al sueldo bruto del empleado menos los impuestos. 
+// El sueldo bruto es igual al sueldo base más los complementos más lo 
+// correspondiente a las horas extra (a 23 € por hora extra). Los impuestos (IRPF) 
+// son un porcentaje del sueldo bruto: sin hijos y sin mayores dependientes se 
+// aplica el 24%. A ese porcentaje se le restan 2 puntos por cada hijo y 1 punto por 
+// cada mayor dependiente. 
 
 int main()
 {

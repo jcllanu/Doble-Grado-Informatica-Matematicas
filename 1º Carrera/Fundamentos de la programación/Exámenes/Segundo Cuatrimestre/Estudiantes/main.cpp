@@ -1,5 +1,8 @@
 #include"ListaGrupos.h"
 
+//Gestion de estudiantes matriculados en un	curso universitario,separados	por	grupos.	El programa	constará de	4
+//módulos: Estudiante, ListaEstudiantes, ListaGrupos y main
+
 int main() {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 	system("chcp 1252");

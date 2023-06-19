@@ -3,6 +3,11 @@
 #include<string>;
 using namespace std;
 
+//Leer palabras.txt	(con xxx como centinela) hasta 50 palabras
+//menú:	mostrar	la lista de palabras, localizar	una	palabra	(indicará su posición),
+//contar las apariciones de una palabra, localizar la primera palabra de más de	 una longitud dada,	
+//desplazar	la  lista de palabras (cada	palabra	pasa a la siguiente	posición del array;	la última a la primera	posición) y	salir.
+
 const int tamano = 50;
 typedef string tLista[tamano];
 

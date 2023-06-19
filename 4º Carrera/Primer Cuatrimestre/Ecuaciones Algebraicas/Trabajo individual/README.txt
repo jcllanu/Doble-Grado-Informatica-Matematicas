@@ -1,0 +1,1 @@
+Trabajo de Ecuaciones Algebraicas (curso 2021/2022) realizado por Juan Carlos Llamas Núñez

@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+
+//Operaciones
 int main()
 {
 	int x = 12, y = 3;

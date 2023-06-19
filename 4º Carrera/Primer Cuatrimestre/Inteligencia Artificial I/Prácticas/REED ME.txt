@@ -1,1 +1,0 @@
-Para que las bibliotecas funcionaran con Jupyter había que terner ciertos archivos/carpetas en la misma carpeta que los .ipynb. En Mezclado están todas esas carpetas de bibliotecas y los archivos .ipynb entremezclados

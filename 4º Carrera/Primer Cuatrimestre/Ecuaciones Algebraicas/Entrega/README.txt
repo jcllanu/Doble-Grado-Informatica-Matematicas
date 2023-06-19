@@ -1,0 +1,1 @@
+Entrega de Ecuaciones Algebraicas (curso 2021/2022) realizada por Juan Carlos Llamas Núñez, Íñigo Alemany Sánchez, Alberto Almagro Sánchez, Enrique Rey Gisbert, Pablo Torre Piñana

@@ -1,7 +1,7 @@
 #include"ListaOpciones.h"
 
 int menu();
-
+//Gestión de viajes de playa o montaña
 int main() {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 	system("chcp 1252");

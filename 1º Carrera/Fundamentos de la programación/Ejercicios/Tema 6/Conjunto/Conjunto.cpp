@@ -1,5 +1,6 @@
 #include"Conjunto.h"
 
+//Operaciones básicas sobre un conjunto
 
 void cjto_vacio(tConjunto& conjunto) {
 	for (int i = 0; i < N; i++) {

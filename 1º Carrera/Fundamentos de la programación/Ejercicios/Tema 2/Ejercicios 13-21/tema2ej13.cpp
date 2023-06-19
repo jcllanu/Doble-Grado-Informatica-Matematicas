@@ -2,7 +2,7 @@
 using namespace std;
 
 
-
+//Ordenar de menor a mayor
 int main()
 {
 	int a = 0, b = 0, c = 0;

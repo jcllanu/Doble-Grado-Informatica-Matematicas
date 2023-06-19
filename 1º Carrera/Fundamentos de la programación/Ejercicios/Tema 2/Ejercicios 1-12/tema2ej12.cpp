@@ -3,7 +3,7 @@
 using namespace std;
 
 
-
+//Cálculo de prestamo hipotecario
 int main()
 {
 	system("chcp 1252");

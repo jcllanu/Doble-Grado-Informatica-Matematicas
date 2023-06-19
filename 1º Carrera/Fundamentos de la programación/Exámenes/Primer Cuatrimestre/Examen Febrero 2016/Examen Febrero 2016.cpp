@@ -5,6 +5,8 @@
 
 using namespace std;
 
+//Consumo clientes
+//lectura, escritura, visualización y modificación de datos
 int unsigned const NUM_INTERVALOS = 5;
 string const Intervalos = "intervalos.txt";
 string const Consumo = "consumos.txt";

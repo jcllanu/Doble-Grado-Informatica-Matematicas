@@ -1,6 +1,7 @@
 // Juan Carlos Llamas
 // Solución al programa del juez de fp.fdi.ucm.es
 // "Giro matrices"
+// El problema permite realizar giros de 90, 180 y 270 grados en sentido horario.
 
 #include <iostream>
 #include <fstream>

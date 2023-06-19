@@ -1,0 +1,2 @@
+Códigos elaborados por Juan Carlos Llamas Núñez y asociados a los problemas del juez 'Domjudge' de la asignatura Fundamentos de Algoritmia (curso 2019/2020). 
+Los enunciados se pueden encontrar en el Drive del doble grado.

@@ -4,7 +4,8 @@
 #include<iomanip>
 
 using namespace std;
-
+//Gestión campeonato de cartas online
+//lectura, escritura, visualización y modificación de datos
 int const N = 12;
 string const Lectura = "equipos.txt";
 string const Escritura = "equiposs.txt";

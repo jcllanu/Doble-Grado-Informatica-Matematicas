@@ -1,0 +1,2 @@
+Prácticas de IA I (curso 2021/2022) realizadas por Juan Carlos Llamas Núñez, Alberto Almagro Sánchez y Enrique Rey Gisbert. 
+Los enunciados que no aparezcan se pueden encontrar en el drive del doble grado.

@@ -1,0 +1,2 @@
+Entregas y examen final de Juan Carlos Llamas Núñez en la asignatura Fundamentos electricidad y electrónica (curso 2019/2020). 
+Los enunciados de las entregas y los exámenes se pueden encontrar en el Drive del doble grado

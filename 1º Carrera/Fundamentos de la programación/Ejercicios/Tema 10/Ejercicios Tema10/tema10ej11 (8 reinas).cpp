@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-
+//Problema de las reinas
 const int N = 11;
 typedef bool tTablero[N][N];
 typedef int tArray[N];

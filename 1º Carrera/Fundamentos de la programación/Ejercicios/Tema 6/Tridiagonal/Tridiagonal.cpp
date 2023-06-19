@@ -1,7 +1,9 @@
 // Juan Carlos Llamas
 // Solución al programa del juez de fp.fdi.ucm.es
 // "Tridiagonal"
-
+// Dada una matriz tridiagonal queremos calcular el elemento de la diagonal
+// principal tal que la suma de dicho elemento con los que tiene a
+// su alrededor (arriba, abajo, izquierda y derecha) sea máximo.
 #include <iostream>
 #include <iomanip>
 #include <fstream>

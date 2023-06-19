@@ -1,0 +1,1 @@
+Prácticas realizadas por Juan Carlos Llamas Núñez en la asignatura de Programación Declarativa (curso 2021/2022)

@@ -3,6 +3,7 @@ using namespace std;
 
 bool comprobar(int a, int b);
 
+//Secuencia	de enteros	terminada en 0(centinela) es creciente o	no
 int main(){
 	
 	int num1, num2;

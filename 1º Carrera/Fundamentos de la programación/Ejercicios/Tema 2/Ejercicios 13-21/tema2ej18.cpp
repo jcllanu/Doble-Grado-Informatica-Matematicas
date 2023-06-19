@@ -2,6 +2,7 @@
 #include<string>
 using namespace std;
 
+//Tabla de multiplicar
 int main()
 {
 	int num=0, i=1;

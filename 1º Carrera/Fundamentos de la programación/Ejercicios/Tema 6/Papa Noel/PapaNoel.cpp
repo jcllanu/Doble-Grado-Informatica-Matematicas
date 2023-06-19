@@ -1,7 +1,7 @@
 // Juan Carlos LLamas Núñez
 // Solución al programa del juez de fp.fdi.ucm.es
 // "Papa Noel"
-
+// Implementación de operadores sobrecargados para multiplicar, leer y escribir matrices
 #include <iostream>
 #include <fstream>
 using namespace std;

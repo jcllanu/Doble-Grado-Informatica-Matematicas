@@ -1,0 +1,1 @@
+Examen de Ecuaciones Algebraicas (curso 2021/2022 convocatoria ordinaria) realizado por Juan Carlos Llamas Núñez

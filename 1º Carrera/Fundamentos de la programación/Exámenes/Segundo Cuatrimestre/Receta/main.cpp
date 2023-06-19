@@ -1,7 +1,7 @@
 #include"Receta.h"
 
 int menu();
-
+//Gestión de recetas a partir de una lista maestra de ingredientes
 
 int main() {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);

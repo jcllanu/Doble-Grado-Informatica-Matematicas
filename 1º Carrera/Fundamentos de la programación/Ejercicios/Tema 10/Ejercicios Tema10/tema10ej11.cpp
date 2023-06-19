@@ -4,8 +4,8 @@ using namespace std;
 const int N = 8;
 typedef bool tTablero[N][N];
 
-bool colocar(tTablero &tablero, int reina);
-
+bool colocar(tTablero &tablero, int reina);
+//Problema de las reinas
 
 int main() {
 	tTabla tabla;

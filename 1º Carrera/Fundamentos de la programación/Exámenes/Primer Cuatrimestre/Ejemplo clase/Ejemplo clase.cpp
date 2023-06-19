@@ -37,6 +37,10 @@ double media(const tLista& lista);
 void mostrar(const tLista& lista);
 void listado(const tLista& lista);
 
+//Gestión de una clase de alumnos:
+//Añadir/eliminar estudiante
+//Calificar
+//Mayor nota, media, listado...
 
 int main() {
 	system("chcp 1252");

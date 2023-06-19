@@ -1,0 +1,1 @@
+El resto de ejercicios realizados por mis complañeros de clase se pueden encontrar en el Drive del doble grado

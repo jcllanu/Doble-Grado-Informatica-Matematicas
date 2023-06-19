@@ -33,6 +33,9 @@ void guardar(const tCesta& cesta, const tCatalogo& catalogo);
 float precioLinea(int i, const tCesta& cesta, const tCatalogo& catalogo);
 bool estaEnOferta(string codigo, const tCatalogo& catalogo, float& precio);
 
+//Gestión de la cesta de la compra
+//Lectura y escritura de datos, añadir productos y mostrar pedido
+
 int main() {
 	system("chcp 1252");
 	int op;

@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-
+//Calculadora de nota con restiricciones 
 int main()
 {
 	double notafinal, examen1, examenfinal, practica1, practica2, actividad;

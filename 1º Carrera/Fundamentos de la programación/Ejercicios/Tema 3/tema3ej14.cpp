@@ -8,7 +8,7 @@ void escribir(int n);
 ifstream input;
 ofstream output;
 
-
+//Numero invertido bucle input output
 int main()
 {
 	input.open("input.txt");

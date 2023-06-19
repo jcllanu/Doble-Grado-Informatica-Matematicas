@@ -5,6 +5,9 @@
 
 using namespace std;
 
+//Gestión de cajeros/operaciones
+//lectura, escritura, visualización y modificación de datos
+
 int const MAX_APUNTES = 500;
 int const Meses = 12;
 string const ConceptoMensual = "Luz";

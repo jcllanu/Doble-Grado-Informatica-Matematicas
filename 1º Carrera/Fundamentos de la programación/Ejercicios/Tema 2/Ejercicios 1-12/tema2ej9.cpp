@@ -2,7 +2,7 @@
 using namespace std;
 
 
-
+//operaciones
 int main()
 {
 	system("chcp 1252");

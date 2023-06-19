@@ -1,0 +1,1 @@
+Prácticas de la asignatura de Procesadores de lenguajes (curso 2021/2022) en las que Juan Carlos Llamas Núéz y Enrique Rey Gisbert diseñamos un lenguaje para el cual generamos y ejecutamos código en wasm

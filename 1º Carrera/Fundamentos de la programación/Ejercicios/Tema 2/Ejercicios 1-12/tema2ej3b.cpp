@@ -6,7 +6,7 @@ double fahr_cels(double f);
 void cels(double c, double f);
 
 
-
+//Conversor Fahrenheit a Celsius
 int main()
 {
 	system("chcp 1252");

@@ -2,7 +2,7 @@
 using namespace std;
 
 
-
+//Operaciones
 int main()
 {
 	double a = 1, b = 1, c = 1, r = 1, d = 1, aux;

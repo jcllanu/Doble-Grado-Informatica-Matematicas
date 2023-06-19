@@ -1,7 +1,7 @@
 #include<iostream>
 #include<ctime>
 using namespace std;
-
+//Operaciones sobre un array
 
 int const N = 25;
 typedef int tTabla[N];
@@ -9,6 +9,7 @@ typedef struct {
 	tTabla tabla;
 	int contador;
 }tTableau;
+
 int max(tTableau tab);
 int aleatorio(int limitinf, int intervalo);
 double media(tTableau tab);

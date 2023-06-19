@@ -1,0 +1,1 @@
+La entrega de ejercicios de la asignatura Geometría Lineal (curso 2020/2021) fue realizada por Juan Carlos Llamas Núñez, Íñigo Alemany Sánchez, Martín Gómez Abejón, Enrique Rey Gisbert, Pablo Torre Piñana

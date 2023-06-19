@@ -1,7 +1,7 @@
 // Juan Carlos Llamas Adrián Sanjuán
 // Solución al programa del juez de fp.fdi.ucm.es
 // "Máxima cota de un mapa topográfico"
-
+// Máximo de una matriz y entrada donde se alcanza dicho máximo
 #include <iostream>
 #include <fstream>
 using namespace std;

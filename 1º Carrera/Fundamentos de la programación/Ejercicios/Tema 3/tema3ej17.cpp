@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-
+//Contador blancos letras digitos
 int main()
 {
 	char a;

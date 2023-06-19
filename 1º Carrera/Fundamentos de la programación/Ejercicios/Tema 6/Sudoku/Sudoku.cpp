@@ -1,10 +1,8 @@
 //Para el primer tipo de entrada, el esquema debe ser el siguiente :
 
 // Nombre: Juan Carlos Llamas Núñez, Adrián Sanjuán Espejo
-// Comentario general sobre la solución,
-// explicando cómo se resuelve el problema
 
-
+//Comprobar y resolver sudokus
 
 #include <iostream>
 #include<string>

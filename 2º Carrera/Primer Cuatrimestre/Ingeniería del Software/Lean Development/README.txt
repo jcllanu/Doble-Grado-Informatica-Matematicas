@@ -1,0 +1,1 @@
+MAteriales elaborados para la presentación de Lean Development por Juan Carlos Llamas Núñez y Rubén Gómez Blanco

@@ -4,7 +4,8 @@
 #include<string>
 
 using namespace std;
-
+//Gestión biblioteca
+//lectura, escritura, visualización y modificación de datos
 
 int const MAX_LIBROS = 10;
 string const Lectura = "biblioteca.txt";

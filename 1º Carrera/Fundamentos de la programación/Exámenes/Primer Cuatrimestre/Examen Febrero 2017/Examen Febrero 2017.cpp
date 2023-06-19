@@ -2,7 +2,8 @@
 #include<fstream>
 #include<iomanip>
 #include<string>
-
+//Gestión liga de futbol
+//lectura, escritura, visualización y modificación de datos
 using namespace std;
 
 int const max_longitud = 8;

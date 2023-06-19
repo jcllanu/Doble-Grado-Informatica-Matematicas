@@ -1,6 +1,7 @@
 // Juan Carlos Llamas
 // Solución al programa del juez de fp.fdi.ucm.es
 // "Buscando a"
+// Localizar una submatriz en una matriz
 
 #include <iostream>
 #include <fstream>

@@ -1,0 +1,1 @@
+Resolvedor automático de sudokus y registro de jugadores

@@ -4,7 +4,8 @@
 #include<string>
 
 using namespace std;
-
+//Gestión de cartera de acciones
+//lectura, escritura, visualización y modificación de datos
 int const N_ACC = 10;
 string const Lectura1 = "cartera.txt";
 string const Lectura2 = "semana.txt";

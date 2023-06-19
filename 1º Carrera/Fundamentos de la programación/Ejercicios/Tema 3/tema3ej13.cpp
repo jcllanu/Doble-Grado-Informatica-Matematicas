@@ -5,6 +5,7 @@ int numero();
 int inverso(int a);
 void escribir(int n, int i);
 
+//Numero invertido bucle
 int main()
 {
 	int num, inv;

@@ -1,0 +1,1 @@
+Algunos problemas de la asignatura MARP (curso 2020/2021) por Juan Carlos Llamas Núñez. El resto de ejercicios elaborados por mis compañeros y los enunciados se encuentran en el Drive del doble grado.

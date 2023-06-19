@@ -36,7 +36,7 @@ void resuelve(const tSopa& s, const tListaBuscadas& l);
 string toStringDireccion(tDir dir);
 void mostrar(const tSopa& s);
 
-
+//Resolutor de de sopas-donut de letras con distintas funcionalidades
 
 
 int main() {

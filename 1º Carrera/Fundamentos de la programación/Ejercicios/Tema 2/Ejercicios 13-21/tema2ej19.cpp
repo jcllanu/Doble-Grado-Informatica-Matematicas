@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+//Operaciones 
 int main()
 {
 	double oper1 = 1, oper2=1;

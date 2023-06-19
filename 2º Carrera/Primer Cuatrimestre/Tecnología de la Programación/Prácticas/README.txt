@@ -1,0 +1,2 @@
+Prácticas de la asignatura Teoría de la Programación I (curso 2019/2020) elaboradas por Juan Carlos Llamas Núñez y Adrián Sanjuán Espejo. 
+Desarrollo del juego Space Invaders, cuyo enunciado puede encontrarse en el drive del doble grado.

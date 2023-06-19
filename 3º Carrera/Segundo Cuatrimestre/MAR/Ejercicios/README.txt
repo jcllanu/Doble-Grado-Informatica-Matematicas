@@ -1,0 +1,2 @@
+Ejercicios del juez 'Domjudge' de la asignatura Métodos algorítmicos para la resolución de problemas (curso 2020/2021) por Juan Carlos Llamas Núñez.
+Los enunciados se encuentran en el drive del doble grado.

@@ -9,6 +9,8 @@ int nuevoNum(const tLista lista, int i, int s);
 int pasar(const tLista lista, int tam, int pas);
 void escritura(const tLista lista, int tam, ofstream& archivo);
 
+//Fibonacci generalizado y operaciones sobre la secuencia generada 
+
 int main() {
 	system("chcp 1252");
 	int n, x, pasarse;

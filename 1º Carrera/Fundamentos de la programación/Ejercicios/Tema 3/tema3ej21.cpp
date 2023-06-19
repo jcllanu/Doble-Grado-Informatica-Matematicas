@@ -4,6 +4,8 @@ using namespace std;
 
 bool triangular(int num);
 
+//Numero triangular? 
+//Se dice que un número es triangular si es la suma de varios enteros positivos consecutivos empezando desde 1
 int main() {
 	int numero;
 	bool esTriangular;

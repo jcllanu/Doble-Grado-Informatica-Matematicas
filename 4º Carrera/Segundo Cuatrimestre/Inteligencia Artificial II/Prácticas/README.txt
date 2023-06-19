@@ -1,0 +1,1 @@
+Prácticas de IA II (curso 2021/2022) por Juan Carlos Llamas Núñez, Alberto Almagro Sánchez y Enrique Rey Gisbert

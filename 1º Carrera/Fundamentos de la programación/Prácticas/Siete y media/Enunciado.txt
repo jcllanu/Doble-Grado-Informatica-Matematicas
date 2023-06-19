@@ -1,0 +1,4 @@
+Implementación del juego de las 7.5 entre una máquina y un humano.
+Varias versiones y en la definitiva la máquina aprende de las estrategias
+que sigue el humano y modifica su comportamiento consecuentemente.
+Práctica FP 2018/2019 UCM 

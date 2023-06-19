@@ -1,3 +1,0 @@
-INDEX VERSION 1.131+C:\Users\usuario_local\Documents\Pong (Completar)\.metadata\.plugins\org.eclipse.jdt.core
-726474049.index
-1668694597.index

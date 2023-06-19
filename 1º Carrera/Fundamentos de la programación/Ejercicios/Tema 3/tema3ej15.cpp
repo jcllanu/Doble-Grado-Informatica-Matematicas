@@ -5,6 +5,7 @@ using namespace std;
 double leer(ifstream& file);
 double comparar(double a, double b);
 
+//Maximo numero de un fichero
 int main()
 {
 	ifstream archivo;

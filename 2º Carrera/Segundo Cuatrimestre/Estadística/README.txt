@@ -1,0 +1,1 @@
+Entregas y examen de la asignatura Estadística (curso 2019/2020) elaboradas por Juan Carlos Llamas Núñez

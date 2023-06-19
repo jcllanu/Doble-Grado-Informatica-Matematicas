@@ -10,6 +10,9 @@ string const Escritura = "pendientes.txt";
 
 typedef enum { embarcando, operado, retrasado, suspendido } tEstadoVuelo;
 
+//Gestión aeropuerto
+//lectura, escritura, visualización y modificación de datos
+
 typedef struct {
 	string numVuelo;
 	string destino;

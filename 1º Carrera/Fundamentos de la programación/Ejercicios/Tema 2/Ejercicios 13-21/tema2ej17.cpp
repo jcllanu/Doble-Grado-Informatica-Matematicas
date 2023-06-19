@@ -2,6 +2,22 @@
 #include<string>
 using namespace std;
 
+//Conversor de medidas anglosajonas a internacionales. El
+// programa lee un número real seguido de un espacio y una letra.
+//p -> pulgadas;
+//m -> millas;
+//f -> grados Fahrenheit;
+//g -> galones líquidos;
+//o -> onzas;
+//l -> libras
+// nueva unidad
+//cm -> centímetros;
+//m -> metros;
+//c -> grados Celsius;
+//l -> litros;
+//gr -> gramos;
+//kg -> kilogramos).
+
 int main()
 {
 	double cantidad = 1;

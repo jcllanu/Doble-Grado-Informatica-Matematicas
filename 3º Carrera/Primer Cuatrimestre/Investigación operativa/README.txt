@@ -1,0 +1,1 @@
+Implementación del Simplex y controles realizados durante el curso por Juan Carlos Llamas Núñez en la asignatura de Investigación Operativa (curso 2020/2021)

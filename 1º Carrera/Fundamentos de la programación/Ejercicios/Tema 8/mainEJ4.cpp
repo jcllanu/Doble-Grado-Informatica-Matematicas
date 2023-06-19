@@ -4,6 +4,8 @@
 
 using namespace std;
 
+//Gestión de productos y de stock
+
 int main(){
 	tStock l;
 	bool b = leer_stock(l);

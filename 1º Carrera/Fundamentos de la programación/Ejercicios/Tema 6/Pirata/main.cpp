@@ -1,5 +1,6 @@
 #include"Pirata.h"
 
+//Juego del pirata
 int main() {
 	bool encontrado = false;
 	bool muerto = false;

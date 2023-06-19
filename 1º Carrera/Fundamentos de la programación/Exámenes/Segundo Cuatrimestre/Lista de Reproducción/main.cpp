@@ -1,5 +1,7 @@
 #include"ListaReproduccion.h"
 
+
+//Elaboración de listas de reproducción musicales a partir de una lista maestra
 int main() {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 	system("chcp 1252");

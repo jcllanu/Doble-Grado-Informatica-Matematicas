@@ -1,5 +1,6 @@
 #include"ListaCompradores.h" 
 
+//Gestión de ventas en una lonja
 int main() {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 	system("chcp 1252");
