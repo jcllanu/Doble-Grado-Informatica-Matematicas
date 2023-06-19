@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../candado.srcs/sources_1/new/candado.vhd" \
-"../../../../candado.srcs/sim_1/new/tb_candado.vhd" \
-
-# Do not sort compile order
-nosort

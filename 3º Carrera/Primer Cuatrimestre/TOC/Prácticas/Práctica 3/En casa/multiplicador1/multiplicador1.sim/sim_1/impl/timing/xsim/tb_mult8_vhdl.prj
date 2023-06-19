@@ -1,6 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../../multiplicador1.srcs/sim_1/imports/Desktop/tb_mult.vhd" \
-
-# Do not sort compile order
-nosort

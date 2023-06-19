@@ -1,7 +1,0 @@
-Running: xsim.dir/candado_behav/xsimk.exe -simmode gui -wdb candado_behav.wdb -simrunnum 0 -socket 52632
-Design successfully loaded
-Design Loading Memory Usage: 6152 KB (Peak: 6152 KB)
-Design Loading CPU Usage: 15 ms
-Simulation completed
-Simulation Memory Usage: 6752 KB (Peak: 6752 KB)
-Simulation CPU Usage: 15 ms

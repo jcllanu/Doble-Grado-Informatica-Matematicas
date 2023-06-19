@@ -1,8 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../ejercicios_avanzados.srcs/sources_1/new/contador.vhd" \
-"../../../../ejercicios_avanzados.srcs/sources_1/new/contador_4bits.vhd" \
-"../../../../ejercicios_avanzados.srcs/sources_1/new/tb_contador.vhd" \
-
-# Do not sort compile order
-nosort
